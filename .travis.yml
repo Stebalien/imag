@@ -3,7 +3,46 @@ language: rust
 rust:
 - beta
 - stable
-cache: cargo
+cache:
+  cargo: true
+  directories:
+    - $TRAVIS_BUILD_DIR/target
+    - $TRAVIS_BUILD_DIR/.imag-documentation/target
+    - $TRAVIS_BUILD_DIR/bin/target
+    - $TRAVIS_BUILD_DIR/imag-bookmark/target
+    - $TRAVIS_BUILD_DIR/imag-counter/target
+    - $TRAVIS_BUILD_DIR/imag-diary/target
+    - $TRAVIS_BUILD_DIR/imag-link/target
+    - $TRAVIS_BUILD_DIR/imag-notes/target
+    - $TRAVIS_BUILD_DIR/imag-ref/target
+    - $TRAVIS_BUILD_DIR/imag-store/target
+    - $TRAVIS_BUILD_DIR/imag-tag/target
+    - $TRAVIS_BUILD_DIR/imag-todo/target
+    - $TRAVIS_BUILD_DIR/imag-view/target
+    - $TRAVIS_BUILD_DIR/libimagbookmark/target
+    - $TRAVIS_BUILD_DIR/libimagcliutil/target
+    - $TRAVIS_BUILD_DIR/libimagcounter/target
+    - $TRAVIS_BUILD_DIR/libimagdiary/target
+    - $TRAVIS_BUILD_DIR/libimagentryfilter/target
+    - $TRAVIS_BUILD_DIR/libimagentrylink/target
+    - $TRAVIS_BUILD_DIR/libimagentrylist/target
+    - $TRAVIS_BUILD_DIR/libimagentrymarkdown/target
+    - $TRAVIS_BUILD_DIR/libimagentrymarkup/target
+    - $TRAVIS_BUILD_DIR/libimagentryselect/target
+    - $TRAVIS_BUILD_DIR/libimagentrytag/target
+    - $TRAVIS_BUILD_DIR/libimagentryview/target
+    - $TRAVIS_BUILD_DIR/libimagerror/target
+    - $TRAVIS_BUILD_DIR/libimaginteraction/target
+    - $TRAVIS_BUILD_DIR/libimagnotes/target
+    - $TRAVIS_BUILD_DIR/libimagnotification/target
+    - $TRAVIS_BUILD_DIR/libimagref/target
+    - $TRAVIS_BUILD_DIR/libimagrt/target
+    - $TRAVIS_BUILD_DIR/libimagstore/target
+    - $TRAVIS_BUILD_DIR/libimagstorestdhook/target
+    - $TRAVIS_BUILD_DIR/libimagtimeui/target
+    - $TRAVIS_BUILD_DIR/libimagtodo/target
+    - $TRAVIS_BUILD_DIR/libimagutil/target
+
 before_install:
 - |
   c=$(git diff $(git merge-base master $TRAVIS_COMMIT)..$TRAVIS_COMMIT --name-only | cut -d "/" -f 1 | uniq)
