@@ -19,6 +19,7 @@ mailparse = "0.3"
 semver = "0.5"
 toml = "0.2.*"
 filters = "0.1.*"
+bitflags = "0.7"
 
 [dependencies.libimagstore]
 path = "../libimagstore"
@@ -28,4 +29,7 @@ path = "../libimagerror"
 
 [dependencies.libimagref]
 path = "../libimagref"
+
+[dependencies.libimagentrylink]
+path = "../libimagentrylink"
 
