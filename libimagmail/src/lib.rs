@@ -13,6 +13,7 @@ extern crate libimagentrylink;
 pub mod error;
 pub mod hasher;
 pub mod iter;
+pub mod linker;
 pub mod mail;
 pub mod result;
 
