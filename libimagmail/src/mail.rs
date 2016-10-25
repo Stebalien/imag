@@ -14,6 +14,7 @@ use hasher::MailHasher;
 use result::Result;
 use error::{MapErrInto, MailErrorKind as MEK};
 
+#[derive(Debug)]
 struct Buffer(String);
 
 impl Buffer {
@@ -28,6 +29,7 @@ impl From<String> for Buffer {
     }
 }
 
+#[derive(Debug)]
 pub struct Mail<'a>(Ref<'a>, Buffer);
 
 impl<'a> Mail<'a> {
