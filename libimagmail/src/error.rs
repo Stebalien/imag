@@ -6,7 +6,9 @@ generate_error_module!(
 
         FetchByHashError => "Error fetching mail from Store by hash",
         FetchError       => "Error fetching mail from Store",
-        IOError => "IO Error"
+        IOError          => "IO Error",
+
+        LinkerError      => "Error while linking mails"
     );
 );
 
