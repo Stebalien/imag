@@ -1,0 +1,1 @@
+initSidebarItems({"struct":[["HasAllTags","Check whether an Entry has all of these tags"],["HasAnyTags","Check whether an Entry has any of these tags"],["HasTag","Check whether an Entry has a certain tag"]]});

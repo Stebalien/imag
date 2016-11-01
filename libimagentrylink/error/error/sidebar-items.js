@@ -1,0 +1,1 @@
+initSidebarItems({"enum":[["LinkErrorKind",""]],"struct":[["LinkError",""],["SomeNotExistingTypeWithATypeNameNoOneWillEverChoose",""]],"trait":[["MapErrInto","Trait to replace"],["OkOrErr","Trait to replace"]]});

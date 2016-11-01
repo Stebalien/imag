@@ -1,0 +1,1 @@
+initSidebarItems({"struct":[["DiaryEntryIterator","A iterator for iterating over diary entries"]]});

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `Runtime` struct in crate `libimagrt`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, Runtime">
+
+    <title>libimagrt::runtime::Runtime - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../../rustdoc.css">
+    <link rel="stylesheet" type="text/css" href="../../main.css">
+    
+
+    
+    
+</head>
+<body class="rustdoc">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <nav class="sidebar">
+        
+        <p class='location'><a href='../index.html'>libimagrt</a>::<wbr><a href='index.html'>runtime</a></p><script>window.sidebarCurrent = {name: 'Runtime', ty: 'struct', relpath: ''};</script><script defer src="sidebar-items.js"></script>
+    </nav>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press ‘S’ to search, ‘?’ for more options…"
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content struct">
+<h1 class='fqn'><span class='in-band'>Struct <a href='../index.html'>libimagrt</a>::<wbr><a href='index.html'>runtime</a>::<wbr><a class='struct' href=''>Runtime</a></span><span class='out-of-band'><span id='render-detail'>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a id='src-543' class='srclink' href='../../src/libimagrt/runtime.rs.html#41-46' title='goto source code'>[src]</a></span></h1>
+<pre class='rust struct'>pub struct Runtime&lt;'a&gt; {
+    // some fields omitted
+}</pre><h2 id='methods'>Methods</h2><h3 class='impl'><span class='in-band'><code>impl&lt;'a&gt; <a class='struct' href='../../libimagrt/runtime/struct.Runtime.html' title='libimagrt::runtime::Runtime'>Runtime</a>&lt;'a&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a id='src-549' class='srclink' href='../../src/libimagrt/runtime.rs.html#48-390' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.new' class='method'><code>fn <a href='#method.new' class='fnname'>new</a>(cli_spec: <a class='struct' href='../../libimagrt/runtime/struct.App.html' title='libimagrt::runtime::App'>App</a>&lt;'a,&nbsp;'a&gt;) -&gt; <a class='enum' href='https://doc.rust-lang.org/nightly/core/result/enum.Result.html' title='core::result::Result'>Result</a>&lt;<a class='struct' href='../../libimagrt/runtime/struct.Runtime.html' title='libimagrt::runtime::Runtime'>Runtime</a>&lt;'a&gt;,&nbsp;<a class='struct' href='../../libimagrt/error/struct.RuntimeError.html' title='libimagrt::error::RuntimeError'>RuntimeError</a>&gt;</code></h4>
+<div class='docblock'><p>Gets the CLI spec for the program and retreives the config file path (or uses the default on
+in $HOME/.imag/config, $XDG_CONFIG_DIR/imag/config or from env(&quot;$IMAG_CONFIG&quot;)
+and builds the Runtime object with it.</p>
+
+<p>The cli_spec object should be initially build with the ::get_default_cli_builder() function.</p>
+</div><h4 id='method.get_default_cli_builder' class='method'><code>fn <a href='#method.get_default_cli_builder' class='fnname'>get_default_cli_builder</a>(appname: &amp;'a <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.str.html'>str</a>, version: &amp;'a <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.str.html'>str</a>, about: &amp;'a <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.str.html'>str</a>) -&gt; <a class='struct' href='../../libimagrt/runtime/struct.App.html' title='libimagrt::runtime::App'>App</a>&lt;'a,&nbsp;'a&gt;</code></h4>
+<div class='docblock'><p>Get a commandline-interface builder object from <code>clap</code></p>
+
+<p>This commandline interface builder object already contains some predefined interface flags:
+  * -v | --verbose for verbosity
+  * --debug for debugging
+  * -c <file> | --config <file> for alternative configuration file
+  * -r <path> | --rtp <path> for alternative runtimepath
+  * --store <path> for alternative store path
+Each has the appropriate help text included.</p>
+
+<p>The <code>appname</code> shall be &quot;imag-<command>&quot;.</p>
+</div><h4 id='method.arg_names' class='method'><code>fn <a href='#method.arg_names' class='fnname'>arg_names</a>() -&gt; <a class='struct' href='https://doc.rust-lang.org/nightly/collections/vec/struct.Vec.html' title='collections::vec::Vec'>Vec</a>&lt;&amp;'static <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.str.html'>str</a>&gt;</code></h4>
+<h4 id='method.arg_verbosity_name' class='method'><code>fn <a href='#method.arg_verbosity_name' class='fnname'>arg_verbosity_name</a>() -&gt; &amp;'static <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.str.html'>str</a></code></h4>
+<h4 id='method.arg_debugging_name' class='method'><code>fn <a href='#method.arg_debugging_name' class='fnname'>arg_debugging_name</a>() -&gt; &amp;'static <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.str.html'>str</a></code></h4>
+<h4 id='method.arg_no_color_output_name' class='method'><code>fn <a href='#method.arg_no_color_output_name' class='fnname'>arg_no_color_output_name</a>() -&gt; &amp;'static <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.str.html'>str</a></code></h4>
+<h4 id='method.arg_config_name' class='method'><code>fn <a href='#method.arg_config_name' class='fnname'>arg_config_name</a>() -&gt; &amp;'static <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.str.html'>str</a></code></h4>
+<h4 id='method.arg_config_override_name' class='method'><code>fn <a href='#method.arg_config_override_name' class='fnname'>arg_config_override_name</a>() -&gt; &amp;'static <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.str.html'>str</a></code></h4>
+<h4 id='method.arg_runtimepath_name' class='method'><code>fn <a href='#method.arg_runtimepath_name' class='fnname'>arg_runtimepath_name</a>() -&gt; &amp;'static <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.str.html'>str</a></code></h4>
+<h4 id='method.arg_storepath_name' class='method'><code>fn <a href='#method.arg_storepath_name' class='fnname'>arg_storepath_name</a>() -&gt; &amp;'static <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.str.html'>str</a></code></h4>
+<h4 id='method.arg_editor_name' class='method'><code>fn <a href='#method.arg_editor_name' class='fnname'>arg_editor_name</a>() -&gt; &amp;'static <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.str.html'>str</a></code></h4>
+<h4 id='method.is_verbose' class='method'><code>fn <a href='#method.is_verbose' class='fnname'>is_verbose</a>(&amp;self) -&gt; <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code></h4>
+<div class='docblock'><p>Get the verbosity flag value</p>
+</div><h4 id='method.is_debugging' class='method'><code>fn <a href='#method.is_debugging' class='fnname'>is_debugging</a>(&amp;self) -&gt; <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code></h4>
+<div class='docblock'><p>Get the debugging flag value</p>
+</div><h4 id='method.rtp' class='method'><code>fn <a href='#method.rtp' class='fnname'>rtp</a>(&amp;self) -&gt; &amp;<a class='struct' href='https://doc.rust-lang.org/nightly/std/path/struct.PathBuf.html' title='std::path::PathBuf'>PathBuf</a></code></h4>
+<div class='docblock'><p>Get the runtimepath</p>
+</div><h4 id='method.cli' class='method'><code>fn <a href='#method.cli' class='fnname'>cli</a>(&amp;self) -&gt; &amp;<a class='struct' href='../../clap/args/arg_matches/struct.ArgMatches.html' title='clap::args::arg_matches::ArgMatches'>ArgMatches</a></code></h4>
+<div class='docblock'><p>Get the commandline interface matches</p>
+</div><h4 id='method.config' class='method'><code>fn <a href='#method.config' class='fnname'>config</a>(&amp;self) -&gt; <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;&amp;Configuration&gt;</code></h4>
+<div class='docblock'><p>Get the configuration object</p>
+</div><h4 id='method.store' class='method'><code>fn <a href='#method.store' class='fnname'>store</a>(&amp;self) -&gt; &amp;<a class='struct' href='../../libimagstore/store/struct.Store.html' title='libimagstore::store::Store'>Store</a></code></h4>
+<div class='docblock'><p>Get the store object</p>
+</div><h4 id='method.editor' class='method'><code>fn <a href='#method.editor' class='fnname'>editor</a>(&amp;self) -&gt; <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='struct' href='https://doc.rust-lang.org/nightly/std/process/struct.Command.html' title='std::process::Command'>Command</a>&gt;</code></h4>
+</div><h2 id='implementations'>Trait Implementations</h2><h3 class='impl'><span class='in-band'><code>impl&lt;'a&gt; <a class='trait' href='https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html' title='core::fmt::Debug'>Debug</a> for <a class='struct' href='../../libimagrt/runtime/struct.Runtime.html' title='libimagrt::runtime::Runtime'>Runtime</a>&lt;'a&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a id='src-533' class='srclink' href='../../src/libimagrt/runtime.rs.html#40' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.fmt' class='method'><code>fn <a href='https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html#tymethod.fmt' class='fnname'>fmt</a>(&amp;self, __arg_0: &amp;mut <a class='struct' href='https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html' title='core::fmt::Formatter'>Formatter</a>) -&gt; <a class='type' href='https://doc.rust-lang.org/nightly/core/fmt/type.Result.html' title='core::fmt::Result'>Result</a></code></h4>
+<div class='docblock'><p>Formats the value using the given formatter.</p>
+</div></div></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <aside id="help" class="hidden">
+        <div>
+            <h1 class="hidden">Help</h1>
+
+            <div class="shortcuts">
+                <h2>Keyboard Shortcuts</h2>
+
+                <dl>
+                    <dt>?</dt>
+                    <dd>Show this help dialog</dd>
+                    <dt>S</dt>
+                    <dd>Focus the search field</dd>
+                    <dt>&larrb;</dt>
+                    <dd>Move up in search results</dd>
+                    <dt>&rarrb;</dt>
+                    <dd>Move down in search results</dd>
+                    <dt>&#9166;</dt>
+                    <dd>Go to active search result</dd>
+                    <dt>+</dt>
+                    <dd>Collapse/expand all sections</dd>
+                </dl>
+            </div>
+
+            <div class="infos">
+                <h2>Search Tricks</h2>
+
+                <p>
+                    Prefix searches with a type followed by a colon (e.g.
+                    <code>fn:</code>) to restrict the search to a given type.
+                </p>
+
+                <p>
+                    Accepted types are: <code>fn</code>, <code>mod</code>,
+                    <code>struct</code>, <code>enum</code>,
+                    <code>trait</code>, <code>type</code>, <code>macro</code>,
+                    and <code>const</code>.
+                </p>
+
+                <p>
+                    Search functions by type signature (e.g.
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
+                </p>
+            </div>
+        </div>
+    </aside>
+
+    
+
+    <script>
+        window.rootPath = "../../";
+        window.currentCrate = "libimagrt";
+        window.playgroundUrl = "";
+    </script>
+    <script src="../../jquery.js"></script>
+    <script src="../../main.js"></script>
+    
+    <script defer src="../../search-index.js"></script>
+</body>
+</html>

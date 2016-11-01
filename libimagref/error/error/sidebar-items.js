@@ -1,0 +1,1 @@
+initSidebarItems({"enum":[["RefErrorKind",""]],"struct":[["RefError",""],["SomeNotExistingTypeWithATypeNameNoOneWillEverChoose",""]],"trait":[["MapErrInto","Trait to replace"],["OkOrErr","Trait to replace"]]});

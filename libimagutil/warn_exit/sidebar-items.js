@@ -1,0 +1,1 @@
+initSidebarItems({"fn":[["warn_exit","This function prints the string `s` via the `warn!()` macro and then exits with the code `code` as status."]]});

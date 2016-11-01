@@ -1,0 +1,1 @@
+initSidebarItems({"enum":[["CounterErrorKind",""]],"struct":[["CounterError",""],["SomeNotExistingTypeWithATypeNameNoOneWillEverChoose",""]],"trait":[["MapErrInto","Trait to replace"],["OkOrErr","Trait to replace"]]});

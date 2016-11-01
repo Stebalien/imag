@@ -1,0 +1,1 @@
+initSidebarItems({"struct":[["FieldPredicate","Check whether certain header field in a entry is equal to a value"]],"trait":[["Predicate",""]]});

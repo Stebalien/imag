@@ -1,0 +1,1 @@
+initSidebarItems({"enum":[["ParserErrorKind",""],["StoreErrorKind",""]],"struct":[["CustomErrorData",""],["ParserError",""],["StoreError",""]],"trait":[["MapErrInto","Trait to replace"],["OkOrErr","Trait to replace"]]});

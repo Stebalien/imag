@@ -1,0 +1,1 @@
+initSidebarItems({"mod":[["delete",""],["store_unload",""],["update",""],["util","Utility functionality for integrating git hooks in the store"]]});

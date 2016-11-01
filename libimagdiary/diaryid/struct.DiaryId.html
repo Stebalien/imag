@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `DiaryId` struct in crate `libimagdiary`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, DiaryId">
+
+    <title>libimagdiary::diaryid::DiaryId - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../../rustdoc.css">
+    <link rel="stylesheet" type="text/css" href="../../main.css">
+    
+
+    
+    
+</head>
+<body class="rustdoc">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <nav class="sidebar">
+        
+        <p class='location'><a href='../index.html'>libimagdiary</a>::<wbr><a href='index.html'>diaryid</a></p><script>window.sidebarCurrent = {name: 'DiaryId', ty: 'struct', relpath: ''};</script><script defer src="sidebar-items.js"></script>
+    </nav>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press ‘S’ to search, ‘?’ for more options…"
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content struct">
+<h1 class='fqn'><span class='in-band'>Struct <a href='../index.html'>libimagdiary</a>::<wbr><a href='index.html'>diaryid</a>::<wbr><a class='struct' href=''>DiaryId</a></span><span class='out-of-band'><span id='render-detail'>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a id='src-229' class='srclink' href='../../src/libimagdiary/diaryid.rs.html#36-43' title='goto source code'>[src]</a></span></h1>
+<pre class='rust struct'>pub struct DiaryId {
+    // some fields omitted
+}</pre><h2 id='methods'>Methods</h2><h3 class='impl'><span class='in-band'><code>impl <a class='struct' href='../../libimagdiary/diaryid/struct.DiaryId.html' title='libimagdiary::diaryid::DiaryId'>DiaryId</a></code></span><span class='out-of-band'><div class='ghost'></div><a id='src-236' class='srclink' href='../../src/libimagdiary/diaryid.rs.html#45-127' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.new' class='method'><code>fn <a href='#method.new' class='fnname'>new</a>(name: <a class='struct' href='https://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>, y: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.i32.html'>i32</a>, m: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u32.html'>u32</a>, d: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u32.html'>u32</a>, h: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u32.html'>u32</a>, min: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u32.html'>u32</a>) -&gt; <a class='struct' href='../../libimagdiary/diaryid/struct.DiaryId.html' title='libimagdiary::diaryid::DiaryId'>DiaryId</a></code></h4>
+<h4 id='method.from_datetime' class='method'><code>fn <a href='#method.from_datetime' class='fnname'>from_datetime</a>&lt;DT:&nbsp;<a class='trait' href='../../chrono/trait.Datelike.html' title='chrono::Datelike'>Datelike</a> + <a class='trait' href='../../chrono/trait.Timelike.html' title='chrono::Timelike'>Timelike</a>&gt;(diary_name: <a class='struct' href='https://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>, dt: DT) -&gt; <a class='struct' href='../../libimagdiary/diaryid/struct.DiaryId.html' title='libimagdiary::diaryid::DiaryId'>DiaryId</a></code></h4>
+<h4 id='method.diary_name' class='method'><code>fn <a href='#method.diary_name' class='fnname'>diary_name</a>(&amp;self) -&gt; &amp;<a class='struct' href='https://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a></code></h4>
+<h4 id='method.year' class='method'><code>fn <a href='#method.year' class='fnname'>year</a>(&amp;self) -&gt; <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.i32.html'>i32</a></code></h4>
+<h4 id='method.month' class='method'><code>fn <a href='#method.month' class='fnname'>month</a>(&amp;self) -&gt; <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u32.html'>u32</a></code></h4>
+<h4 id='method.day' class='method'><code>fn <a href='#method.day' class='fnname'>day</a>(&amp;self) -&gt; <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u32.html'>u32</a></code></h4>
+<h4 id='method.hour' class='method'><code>fn <a href='#method.hour' class='fnname'>hour</a>(&amp;self) -&gt; <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u32.html'>u32</a></code></h4>
+<h4 id='method.minute' class='method'><code>fn <a href='#method.minute' class='fnname'>minute</a>(&amp;self) -&gt; <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u32.html'>u32</a></code></h4>
+<h4 id='method.with_diary_name' class='method'><code>fn <a href='#method.with_diary_name' class='fnname'>with_diary_name</a>(self, name: <a class='struct' href='https://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>) -&gt; <a class='struct' href='../../libimagdiary/diaryid/struct.DiaryId.html' title='libimagdiary::diaryid::DiaryId'>DiaryId</a></code></h4>
+<h4 id='method.with_year' class='method'><code>fn <a href='#method.with_year' class='fnname'>with_year</a>(self, year: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.i32.html'>i32</a>) -&gt; <a class='struct' href='../../libimagdiary/diaryid/struct.DiaryId.html' title='libimagdiary::diaryid::DiaryId'>DiaryId</a></code></h4>
+<h4 id='method.with_month' class='method'><code>fn <a href='#method.with_month' class='fnname'>with_month</a>(self, month: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u32.html'>u32</a>) -&gt; <a class='struct' href='../../libimagdiary/diaryid/struct.DiaryId.html' title='libimagdiary::diaryid::DiaryId'>DiaryId</a></code></h4>
+<h4 id='method.with_day' class='method'><code>fn <a href='#method.with_day' class='fnname'>with_day</a>(self, day: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u32.html'>u32</a>) -&gt; <a class='struct' href='../../libimagdiary/diaryid/struct.DiaryId.html' title='libimagdiary::diaryid::DiaryId'>DiaryId</a></code></h4>
+<h4 id='method.with_hour' class='method'><code>fn <a href='#method.with_hour' class='fnname'>with_hour</a>(self, hour: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u32.html'>u32</a>) -&gt; <a class='struct' href='../../libimagdiary/diaryid/struct.DiaryId.html' title='libimagdiary::diaryid::DiaryId'>DiaryId</a></code></h4>
+<h4 id='method.with_minute' class='method'><code>fn <a href='#method.with_minute' class='fnname'>with_minute</a>(self, minute: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u32.html'>u32</a>) -&gt; <a class='struct' href='../../libimagdiary/diaryid/struct.DiaryId.html' title='libimagdiary::diaryid::DiaryId'>DiaryId</a></code></h4>
+<h4 id='method.now' class='method'><code>fn <a href='#method.now' class='fnname'>now</a>(name: <a class='struct' href='https://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>) -&gt; <a class='struct' href='../../libimagdiary/diaryid/struct.DiaryId.html' title='libimagdiary::diaryid::DiaryId'>DiaryId</a></code></h4>
+</div><h2 id='implementations'>Trait Implementations</h2><h3 class='impl'><span class='in-band'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html' title='core::clone::Clone'>Clone</a> for <a class='struct' href='../../libimagdiary/diaryid/struct.DiaryId.html' title='libimagdiary::diaryid::DiaryId'>DiaryId</a></code></span><span class='out-of-band'><div class='ghost'></div><a id='src-209' class='srclink' href='../../src/libimagdiary/diaryid.rs.html#35' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.clone' class='method'><code>fn <a href='https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html#tymethod.clone' class='fnname'>clone</a>(&amp;self) -&gt; <a class='struct' href='../../libimagdiary/diaryid/struct.DiaryId.html' title='libimagdiary::diaryid::DiaryId'>DiaryId</a></code></h4>
+<div class='docblock'><p>Returns a copy of the value. <a href="https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html#tymethod.clone">Read more</a></p>
+</div><h4 id='method.clone_from' class='method'><code>fn <a href='https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html#method.clone_from' class='fnname'>clone_from</a>(&amp;mut self, source: &amp;Self)</code><div class='since' title='Stable since Rust version 1.0.0'>1.0.0</div></h4>
+<div class='docblock'><p>Performs copy-assignment from <code>source</code>. <a href="https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html#method.clone_from">Read more</a></p>
+</div></div><h3 class='impl'><span class='in-band'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html' title='core::fmt::Debug'>Debug</a> for <a class='struct' href='../../libimagdiary/diaryid/struct.DiaryId.html' title='libimagdiary::diaryid::DiaryId'>DiaryId</a></code></span><span class='out-of-band'><div class='ghost'></div><a id='src-218' class='srclink' href='../../src/libimagdiary/diaryid.rs.html#35' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.fmt' class='method'><code>fn <a href='https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html#tymethod.fmt' class='fnname'>fmt</a>(&amp;self, __arg_0: &amp;mut <a class='struct' href='https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html' title='core::fmt::Formatter'>Formatter</a>) -&gt; <a class='type' href='https://doc.rust-lang.org/nightly/core/fmt/type.Result.html' title='core::fmt::Result'>Result</a></code></h4>
+<div class='docblock'><p>Formats the value using the given formatter.</p>
+</div></div><h3 class='impl'><span class='in-band'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/default/trait.Default.html' title='core::default::Default'>Default</a> for <a class='struct' href='../../libimagdiary/diaryid/struct.DiaryId.html' title='libimagdiary::diaryid::DiaryId'>DiaryId</a></code></span><span class='out-of-band'><div class='ghost'></div><a id='src-285' class='srclink' href='../../src/libimagdiary/diaryid.rs.html#129-137' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.default' class='method'><code>fn <a href='https://doc.rust-lang.org/nightly/core/default/trait.Default.html#tymethod.default' class='fnname'>default</a>() -&gt; <a class='struct' href='../../libimagdiary/diaryid/struct.DiaryId.html' title='libimagdiary::diaryid::DiaryId'>DiaryId</a></code></h4>
+<div class='docblock'><p>Create a default DiaryId which is a diaryid for a diary named &quot;default&quot; with
+time = 0000-00-00 00:00:00</p>
+</div></div><h3 class='impl'><span class='in-band'><code>impl <a class='trait' href='../../libimagstore/storeid/trait.IntoStoreId.html' title='libimagstore::storeid::IntoStoreId'>IntoStoreId</a> for <a class='struct' href='../../libimagdiary/diaryid/struct.DiaryId.html' title='libimagdiary::diaryid::DiaryId'>DiaryId</a></code></span><span class='out-of-band'><div class='ghost'></div><a id='src-288' class='srclink' href='../../src/libimagdiary/diaryid.rs.html#139-146' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.into_storeid' class='method'><code>fn <a href='../../libimagstore/storeid/trait.IntoStoreId.html#tymethod.into_storeid' class='fnname'>into_storeid</a>(self) -&gt; <a class='type' href='../../libimagstore/store/type.Result.html' title='libimagstore::store::Result'>StoreResult</a>&lt;<a class='struct' href='../../libimagstore/storeid/struct.StoreId.html' title='libimagstore::storeid::StoreId'>StoreId</a>&gt;</code></h4>
+</div><h3 class='impl'><span class='in-band'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/convert/trait.Into.html' title='core::convert::Into'>Into</a>&lt;<a class='struct' href='https://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>&gt; for <a class='struct' href='../../libimagdiary/diaryid/struct.DiaryId.html' title='libimagdiary::diaryid::DiaryId'>DiaryId</a></code></span><span class='out-of-band'><div class='ghost'></div><a id='src-292' class='srclink' href='../../src/libimagdiary/diaryid.rs.html#148-155' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.into' class='method'><code>fn <a href='https://doc.rust-lang.org/nightly/core/convert/trait.Into.html#tymethod.into' class='fnname'>into</a>(self) -&gt; <a class='struct' href='https://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a></code></h4>
+<div class='docblock'><p>Performs the conversion.</p>
+</div></div><h3 class='impl'><span class='in-band'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/fmt/trait.Display.html' title='core::fmt::Display'>Display</a> for <a class='struct' href='../../libimagdiary/diaryid/struct.DiaryId.html' title='libimagdiary::diaryid::DiaryId'>DiaryId</a></code></span><span class='out-of-band'><div class='ghost'></div><a id='src-303' class='srclink' href='../../src/libimagdiary/diaryid.rs.html#157-164' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.fmt-1' class='method'><code>fn <a href='https://doc.rust-lang.org/nightly/core/fmt/trait.Display.html#tymethod.fmt' class='fnname'>fmt</a>(&amp;self, fmt: &amp;mut <a class='struct' href='https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html' title='core::fmt::Formatter'>Formatter</a>) -&gt; <a class='enum' href='https://doc.rust-lang.org/nightly/core/result/enum.Result.html' title='core::result::Result'>Result</a>&lt;<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.tuple.html'>()</a>,&nbsp;<a class='struct' href='https://doc.rust-lang.org/nightly/core/fmt/struct.Error.html' title='core::fmt::Error'>FmtError</a>&gt;</code></h4>
+<div class='docblock'><p>Formats the value using the given formatter.</p>
+</div></div><h3 class='impl'><span class='in-band'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/convert/trait.Into.html' title='core::convert::Into'>Into</a>&lt;<a class='struct' href='../../chrono/naive/datetime/struct.NaiveDateTime.html' title='chrono::naive::datetime::NaiveDateTime'>NaiveDateTime</a>&gt; for <a class='struct' href='../../libimagdiary/diaryid/struct.DiaryId.html' title='libimagdiary::diaryid::DiaryId'>DiaryId</a></code></span><span class='out-of-band'><div class='ghost'></div><a id='src-315' class='srclink' href='../../src/libimagdiary/diaryid.rs.html#166-174' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.into-1' class='method'><code>fn <a href='https://doc.rust-lang.org/nightly/core/convert/trait.Into.html#tymethod.into' class='fnname'>into</a>(self) -&gt; <a class='struct' href='../../chrono/naive/datetime/struct.NaiveDateTime.html' title='chrono::naive::datetime::NaiveDateTime'>NaiveDateTime</a></code></h4>
+<div class='docblock'><p>Performs the conversion.</p>
+</div></div><h3 class='impl'><span class='in-band'><code>impl <a class='trait' href='../../libimagdiary/diaryid/trait.FromStoreId.html' title='libimagdiary::diaryid::FromStoreId'>FromStoreId</a> for <a class='struct' href='../../libimagdiary/diaryid/struct.DiaryId.html' title='libimagdiary::diaryid::DiaryId'>DiaryId</a></code></span><span class='out-of-band'><div class='ghost'></div><a id='src-330' class='srclink' href='../../src/libimagdiary/diaryid.rs.html#191-236' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.from_storeid' class='method'><code>fn <a href='../../libimagdiary/diaryid/trait.FromStoreId.html#tymethod.from_storeid' class='fnname'>from_storeid</a>(s: &amp;<a class='struct' href='../../libimagstore/storeid/struct.StoreId.html' title='libimagstore::storeid::StoreId'>StoreId</a>) -&gt; <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='struct' href='../../libimagdiary/diaryid/struct.DiaryId.html' title='libimagdiary::diaryid::DiaryId'>DiaryId</a>&gt;</code></h4>
+</div></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <aside id="help" class="hidden">
+        <div>
+            <h1 class="hidden">Help</h1>
+
+            <div class="shortcuts">
+                <h2>Keyboard Shortcuts</h2>
+
+                <dl>
+                    <dt>?</dt>
+                    <dd>Show this help dialog</dd>
+                    <dt>S</dt>
+                    <dd>Focus the search field</dd>
+                    <dt>&larrb;</dt>
+                    <dd>Move up in search results</dd>
+                    <dt>&rarrb;</dt>
+                    <dd>Move down in search results</dd>
+                    <dt>&#9166;</dt>
+                    <dd>Go to active search result</dd>
+                    <dt>+</dt>
+                    <dd>Collapse/expand all sections</dd>
+                </dl>
+            </div>
+
+            <div class="infos">
+                <h2>Search Tricks</h2>
+
+                <p>
+                    Prefix searches with a type followed by a colon (e.g.
+                    <code>fn:</code>) to restrict the search to a given type.
+                </p>
+
+                <p>
+                    Accepted types are: <code>fn</code>, <code>mod</code>,
+                    <code>struct</code>, <code>enum</code>,
+                    <code>trait</code>, <code>type</code>, <code>macro</code>,
+                    and <code>const</code>.
+                </p>
+
+                <p>
+                    Search functions by type signature (e.g.
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
+                </p>
+            </div>
+        </div>
+    </aside>
+
+    
+
+    <script>
+        window.rootPath = "../../";
+        window.currentCrate = "libimagdiary";
+        window.playgroundUrl = "";
+    </script>
+    <script src="../../jquery.js"></script>
+    <script src="../../main.js"></script>
+    
+    <script defer src="../../search-index.js"></script>
+</body>
+</html>

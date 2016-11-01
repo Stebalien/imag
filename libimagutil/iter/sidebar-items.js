@@ -1,0 +1,1 @@
+initSidebarItems({"trait":[["FoldResult","Folds its contents to a result."]]});

@@ -1,0 +1,1 @@
+initSidebarItems({"struct":[["StoreId","The Index into the Store"],["StoreIdIterator",""]],"trait":[["IntoStoreId","This Trait allows you to convert various representations to a single one suitable for usage in the Store"]]});

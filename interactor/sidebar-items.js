@@ -1,0 +1,1 @@
+initSidebarItems({"fn":[["default_menu_cmd","Returns the user's preferred menu program from the `MENU` environment variable if it exists."],["pick_file","Asks the user to select a file from the filesystem, starting at directory `path`."],["pick_from_list","Asks the user to select an item from a list."],["read_from_tty",""],["read_from_tty_file",""]]});

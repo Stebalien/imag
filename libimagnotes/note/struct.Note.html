@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `Note` struct in crate `libimagnotes`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, Note">
+
+    <title>libimagnotes::note::Note - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../../rustdoc.css">
+    <link rel="stylesheet" type="text/css" href="../../main.css">
+    
+
+    
+    
+</head>
+<body class="rustdoc">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <nav class="sidebar">
+        
+        <p class='location'><a href='../index.html'>libimagnotes</a>::<wbr><a href='index.html'>note</a></p><script>window.sidebarCurrent = {name: 'Note', ty: 'struct', relpath: ''};</script><script defer src="sidebar-items.js"></script>
+    </nav>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press ‘S’ to search, ‘?’ for more options…"
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content struct">
+<h1 class='fqn'><span class='in-band'>Struct <a href='../index.html'>libimagnotes</a>::<wbr><a href='index.html'>note</a>::<wbr><a class='struct' href=''>Note</a></span><span class='out-of-band'><span id='render-detail'>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a id='src-194' class='srclink' href='../../src/libimagnotes/note.rs.html#44-46' title='goto source code'>[src]</a></span></h1>
+<pre class='rust struct'>pub struct Note&lt;'a&gt; {
+    // some fields omitted
+}</pre><h2 id='methods'>Methods</h2><h3 class='impl'><span class='in-band'><code>impl&lt;'a&gt; <a class='struct' href='../../libimagnotes/note/struct.Note.html' title='libimagnotes::note::Note'>Note</a>&lt;'a&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a id='src-197' class='srclink' href='../../src/libimagnotes/note.rs.html#48-143' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.new' class='method'><code>fn <a href='#method.new' class='fnname'>new</a>(store: &amp;<a class='struct' href='../../libimagstore/store/struct.Store.html' title='libimagstore::store::Store'>Store</a>, name: <a class='struct' href='https://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>, text: <a class='struct' href='https://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>) -&gt; <a class='type' href='../../libimagnotes/result/type.Result.html' title='libimagnotes::result::Result'>Result</a>&lt;<a class='struct' href='../../libimagnotes/note/struct.Note.html' title='libimagnotes::note::Note'>Note</a>&gt;</code></h4>
+<h4 id='method.set_name' class='method'><code>fn <a href='#method.set_name' class='fnname'>set_name</a>(&amp;mut self, n: <a class='struct' href='https://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>) -&gt; <a class='type' href='../../libimagnotes/result/type.Result.html' title='libimagnotes::result::Result'>Result</a>&lt;<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.tuple.html'>()</a>&gt;</code></h4>
+<h4 id='method.get_name' class='method'><code>fn <a href='#method.get_name' class='fnname'>get_name</a>(&amp;self) -&gt; <a class='type' href='../../libimagnotes/result/type.Result.html' title='libimagnotes::result::Result'>Result</a>&lt;<a class='struct' href='https://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>&gt;</code></h4>
+<h4 id='method.set_text' class='method'><code>fn <a href='#method.set_text' class='fnname'>set_text</a>(&amp;mut self, n: <a class='struct' href='https://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>)</code></h4>
+<h4 id='method.get_text' class='method'><code>fn <a href='#method.get_text' class='fnname'>get_text</a>(&amp;self) -&gt; &amp;<a class='struct' href='https://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a></code></h4>
+<h4 id='method.delete' class='method'><code>fn <a href='#method.delete' class='fnname'>delete</a>(store: &amp;<a class='struct' href='../../libimagstore/store/struct.Store.html' title='libimagstore::store::Store'>Store</a>, name: <a class='struct' href='https://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>) -&gt; <a class='type' href='../../libimagnotes/result/type.Result.html' title='libimagnotes::result::Result'>Result</a>&lt;<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.tuple.html'>()</a>&gt;</code></h4>
+<h4 id='method.retrieve' class='method'><code>fn <a href='#method.retrieve' class='fnname'>retrieve</a>(store: &amp;<a class='struct' href='../../libimagstore/store/struct.Store.html' title='libimagstore::store::Store'>Store</a>, name: <a class='struct' href='https://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>) -&gt; <a class='type' href='../../libimagnotes/result/type.Result.html' title='libimagnotes::result::Result'>Result</a>&lt;<a class='struct' href='../../libimagnotes/note/struct.Note.html' title='libimagnotes::note::Note'>Note</a>&gt;</code></h4>
+<h4 id='method.get' class='method'><code>fn <a href='#method.get' class='fnname'>get</a>(store: &amp;<a class='struct' href='../../libimagstore/store/struct.Store.html' title='libimagstore::store::Store'>Store</a>, name: <a class='struct' href='https://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>) -&gt; <a class='type' href='../../libimagnotes/result/type.Result.html' title='libimagnotes::result::Result'>Result</a>&lt;<a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='struct' href='../../libimagnotes/note/struct.Note.html' title='libimagnotes::note::Note'>Note</a>&gt;&gt;</code></h4>
+<h4 id='method.all_notes' class='method'><code>fn <a href='#method.all_notes' class='fnname'>all_notes</a>(store: &amp;<a class='struct' href='../../libimagstore/store/struct.Store.html' title='libimagstore::store::Store'>Store</a>) -&gt; <a class='type' href='../../libimagnotes/result/type.Result.html' title='libimagnotes::result::Result'>Result</a>&lt;<a class='struct' href='../../libimagnotes/note/struct.NoteIterator.html' title='libimagnotes::note::NoteIterator'>NoteIterator</a>&gt;</code></h4>
+</div><h2 id='implementations'>Trait Implementations</h2><h3 class='impl'><span class='in-band'><code>impl&lt;'a&gt; <a class='trait' href='https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html' title='core::fmt::Debug'>Debug</a> for <a class='struct' href='../../libimagnotes/note/struct.Note.html' title='libimagnotes::note::Note'>Note</a>&lt;'a&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a id='src-187' class='srclink' href='../../src/libimagnotes/note.rs.html#43' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.fmt' class='method'><code>fn <a href='https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html#tymethod.fmt' class='fnname'>fmt</a>(&amp;self, __arg_0: &amp;mut <a class='struct' href='https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html' title='core::fmt::Formatter'>Formatter</a>) -&gt; <a class='type' href='https://doc.rust-lang.org/nightly/core/fmt/type.Result.html' title='core::fmt::Result'>Result</a></code></h4>
+<div class='docblock'><p>Formats the value using the given formatter.</p>
+</div></div><h3 class='impl'><span class='in-band'><code>impl&lt;'a&gt; <a class='trait' href='../../libimagentryedit/edit/trait.Edit.html' title='libimagentryedit::edit::Edit'>Edit</a> for <a class='struct' href='../../libimagnotes/note/struct.Note.html' title='libimagnotes::note::Note'>Note</a>&lt;'a&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a id='src-265' class='srclink' href='../../src/libimagnotes/note.rs.html#145-151' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.edit_content' class='method'><code>fn <a href='../../libimagentryedit/edit/trait.Edit.html#tymethod.edit_content' class='fnname'>edit_content</a>(&amp;mut self, rt: &amp;<a class='struct' href='../../libimagrt/runtime/struct.Runtime.html' title='libimagrt::runtime::Runtime'>Runtime</a>) -&gt; <a class='type' href='../../libimagentryedit/result/type.Result.html' title='libimagentryedit::result::Result'>EditResult</a>&lt;<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.tuple.html'>()</a>&gt;</code></h4>
+</div><h3 class='impl'><span class='in-band'><code>impl&lt;'a&gt; <a class='trait' href='../../libimagentrytag/tagable/trait.Tagable.html' title='libimagentrytag::tagable::Tagable'>Tagable</a> for <a class='struct' href='../../libimagnotes/note/struct.Note.html' title='libimagnotes::note::Note'>Note</a>&lt;'a&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a id='src-270' class='srclink' href='../../src/libimagnotes/note.rs.html#153-179' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.get_tags' class='method'><code>fn <a href='../../libimagentrytag/tagable/trait.Tagable.html#tymethod.get_tags' class='fnname'>get_tags</a>(&amp;self) -&gt; <a class='type' href='../../libimagentrytag/result/type.Result.html' title='libimagentrytag::result::Result'>TagResult</a>&lt;<a class='struct' href='https://doc.rust-lang.org/nightly/collections/vec/struct.Vec.html' title='collections::vec::Vec'>Vec</a>&lt;<a class='type' href='../../libimagentrytag/tag/type.Tag.html' title='libimagentrytag::tag::Tag'>Tag</a>&gt;&gt;</code></h4>
+<h4 id='method.set_tags' class='method'><code>fn <a href='../../libimagentrytag/tagable/trait.Tagable.html#tymethod.set_tags' class='fnname'>set_tags</a>(&amp;mut self, ts: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.slice.html'>&amp;[</a><a class='type' href='../../libimagentrytag/tag/type.Tag.html' title='libimagentrytag::tag::Tag'>Tag</a><a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.slice.html'>]</a>) -&gt; <a class='type' href='../../libimagentrytag/result/type.Result.html' title='libimagentrytag::result::Result'>TagResult</a>&lt;<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.tuple.html'>()</a>&gt;</code></h4>
+<h4 id='method.add_tag' class='method'><code>fn <a href='../../libimagentrytag/tagable/trait.Tagable.html#tymethod.add_tag' class='fnname'>add_tag</a>(&amp;mut self, t: <a class='type' href='../../libimagentrytag/tag/type.Tag.html' title='libimagentrytag::tag::Tag'>Tag</a>) -&gt; <a class='type' href='../../libimagentrytag/result/type.Result.html' title='libimagentrytag::result::Result'>TagResult</a>&lt;<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.tuple.html'>()</a>&gt;</code></h4>
+<h4 id='method.remove_tag' class='method'><code>fn <a href='../../libimagentrytag/tagable/trait.Tagable.html#tymethod.remove_tag' class='fnname'>remove_tag</a>(&amp;mut self, t: <a class='type' href='../../libimagentrytag/tag/type.Tag.html' title='libimagentrytag::tag::Tag'>Tag</a>) -&gt; <a class='type' href='../../libimagentrytag/result/type.Result.html' title='libimagentrytag::result::Result'>TagResult</a>&lt;<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.tuple.html'>()</a>&gt;</code></h4>
+<h4 id='method.has_tag' class='method'><code>fn <a href='../../libimagentrytag/tagable/trait.Tagable.html#tymethod.has_tag' class='fnname'>has_tag</a>(&amp;self, t: <a class='type' href='../../libimagentrytag/tag/type.TagSlice.html' title='libimagentrytag::tag::TagSlice'>TagSlice</a>) -&gt; <a class='type' href='../../libimagentrytag/result/type.Result.html' title='libimagentrytag::result::Result'>TagResult</a>&lt;<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a>&gt;</code></h4>
+<h4 id='method.has_tags' class='method'><code>fn <a href='../../libimagentrytag/tagable/trait.Tagable.html#tymethod.has_tags' class='fnname'>has_tags</a>(&amp;self, ts: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.slice.html'>&amp;[</a><a class='type' href='../../libimagentrytag/tag/type.Tag.html' title='libimagentrytag::tag::Tag'>Tag</a><a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.slice.html'>]</a>) -&gt; <a class='type' href='../../libimagentrytag/result/type.Result.html' title='libimagentrytag::result::Result'>TagResult</a>&lt;<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a>&gt;</code></h4>
+</div><h3 class='impl'><span class='in-band'><code>impl&lt;'a&gt; <a class='trait' href='https://doc.rust-lang.org/nightly/core/ops/trait.Deref.html' title='core::ops::Deref'>Deref</a> for <a class='struct' href='../../libimagnotes/note/struct.Note.html' title='libimagnotes::note::Note'>Note</a>&lt;'a&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a id='src-304' class='srclink' href='../../src/libimagnotes/note.rs.html#197-205' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='associatedtype.Target' class='type'><code>type <a href='https://doc.rust-lang.org/nightly/core/ops/trait.Deref.html#associatedtype.Target' class='type'>Target</a> = <a class='struct' href='../../libimagstore/store/struct.FileLockEntry.html' title='libimagstore::store::FileLockEntry'>FileLockEntry</a>&lt;'a&gt;</code></h4>
+<div class='docblock'><p>The resulting type after dereferencing</p>
+</div><h4 id='method.deref' class='method'><code>fn <a href='https://doc.rust-lang.org/nightly/core/ops/trait.Deref.html#tymethod.deref' class='fnname'>deref</a>(&amp;self) -&gt; &amp;<a class='struct' href='../../libimagstore/store/struct.FileLockEntry.html' title='libimagstore::store::FileLockEntry'>FileLockEntry</a>&lt;'a&gt;</code></h4>
+<div class='docblock'><p>The method called to dereference a value</p>
+</div></div></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <aside id="help" class="hidden">
+        <div>
+            <h1 class="hidden">Help</h1>
+
+            <div class="shortcuts">
+                <h2>Keyboard Shortcuts</h2>
+
+                <dl>
+                    <dt>?</dt>
+                    <dd>Show this help dialog</dd>
+                    <dt>S</dt>
+                    <dd>Focus the search field</dd>
+                    <dt>&larrb;</dt>
+                    <dd>Move up in search results</dd>
+                    <dt>&rarrb;</dt>
+                    <dd>Move down in search results</dd>
+                    <dt>&#9166;</dt>
+                    <dd>Go to active search result</dd>
+                    <dt>+</dt>
+                    <dd>Collapse/expand all sections</dd>
+                </dl>
+            </div>
+
+            <div class="infos">
+                <h2>Search Tricks</h2>
+
+                <p>
+                    Prefix searches with a type followed by a colon (e.g.
+                    <code>fn:</code>) to restrict the search to a given type.
+                </p>
+
+                <p>
+                    Accepted types are: <code>fn</code>, <code>mod</code>,
+                    <code>struct</code>, <code>enum</code>,
+                    <code>trait</code>, <code>type</code>, <code>macro</code>,
+                    and <code>const</code>.
+                </p>
+
+                <p>
+                    Search functions by type signature (e.g.
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
+                </p>
+            </div>
+        </div>
+    </aside>
+
+    
+
+    <script>
+        window.rootPath = "../../";
+        window.currentCrate = "libimagnotes";
+        window.playgroundUrl = "";
+    </script>
+    <script src="../../jquery.js"></script>
+    <script src="../../main.js"></script>
+    
+    <script defer src="../../search-index.js"></script>
+</body>
+</html>

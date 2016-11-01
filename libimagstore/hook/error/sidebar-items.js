@@ -1,0 +1,1 @@
+initSidebarItems({"enum":[["HookErrorKind",""]],"struct":[["CustomData",""],["HookError",""]],"trait":[["MapErrInto","Trait to replace"]]});

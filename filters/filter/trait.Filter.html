@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `Filter` trait in crate `filters`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, Filter">
+
+    <title>filters::filter::Filter - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../../rustdoc.css">
+    <link rel="stylesheet" type="text/css" href="../../main.css">
+    
+
+    
+    
+</head>
+<body class="rustdoc">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <nav class="sidebar">
+        
+        <p class='location'><a href='../index.html'>filters</a>::<wbr><a href='index.html'>filter</a></p><script>window.sidebarCurrent = {name: 'Filter', ty: 'trait', relpath: ''};</script><script defer src="sidebar-items.js"></script>
+    </nav>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press ‘S’ to search, ‘?’ for more options…"
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content trait">
+<h1 class='fqn'><span class='in-band'>Trait <a href='../index.html'>filters</a>::<wbr><a href='index.html'>filter</a>::<wbr><a class='trait' href=''>Filter</a></span><span class='out-of-band'><span id='render-detail'>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a id='src-27' class='srclink' href='../../src/filters/filter.rs.html#40-259' title='goto source code'>[src]</a></span></h1>
+<pre class='rust trait'>pub trait Filter&lt;N&gt; {
+    fn <a href='#tymethod.filter' class='fnname'>filter</a>(&amp;self, &amp;N) -&gt; <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a>;
+
+    fn <a href='#method.not' class='fnname'>not</a>(self) -&gt; <a class='struct' href='../../filters/ops/not/struct.Not.html' title='filters::ops::not::Not'>Not</a>&lt;Self&gt; <span class='where'>where Self: <a class='trait' href='https://doc.rust-lang.org/nightly/core/marker/trait.Sized.html' title='core::marker::Sized'>Sized</a></span> { ... }
+    fn <a href='#method.or' class='fnname'>or</a>&lt;F&gt;(self, other: F) -&gt; <a class='struct' href='../../filters/ops/or/struct.Or.html' title='filters::ops::or::Or'>Or</a>&lt;Self,&nbsp;F::IntoFilt&gt; <span class='where'>where Self: <a class='trait' href='https://doc.rust-lang.org/nightly/core/marker/trait.Sized.html' title='core::marker::Sized'>Sized</a>, F: <a class='trait' href='../../filters/filter/trait.IntoFilter.html' title='filters::filter::IntoFilter'>IntoFilter</a>&lt;N&gt; + <a class='trait' href='https://doc.rust-lang.org/nightly/core/marker/trait.Sized.html' title='core::marker::Sized'>Sized</a></span> { ... }
+    fn <a href='#method.or_not' class='fnname'>or_not</a>&lt;F&gt;(self, other: F) -&gt; <a class='struct' href='../../filters/ops/or/struct.Or.html' title='filters::ops::or::Or'>Or</a>&lt;Self,&nbsp;<a class='struct' href='../../filters/ops/not/struct.Not.html' title='filters::ops::not::Not'>Not</a>&lt;F::IntoFilt&gt;&gt; <span class='where'>where Self: <a class='trait' href='https://doc.rust-lang.org/nightly/core/marker/trait.Sized.html' title='core::marker::Sized'>Sized</a>, F: <a class='trait' href='../../filters/filter/trait.IntoFilter.html' title='filters::filter::IntoFilter'>IntoFilter</a>&lt;N&gt; + <a class='trait' href='https://doc.rust-lang.org/nightly/core/marker/trait.Sized.html' title='core::marker::Sized'>Sized</a></span> { ... }
+    fn <a href='#method.or3' class='fnname'>or3</a>&lt;F,&nbsp;F2&gt;(self, other: F, other2: F2) -&gt; <a class='struct' href='../../filters/ops/or/struct.Or.html' title='filters::ops::or::Or'>Or</a>&lt;Self,&nbsp;<a class='struct' href='../../filters/ops/or/struct.Or.html' title='filters::ops::or::Or'>Or</a>&lt;F::IntoFilt,&nbsp;F2::IntoFilt&gt;&gt; <span class='where'>where Self: <a class='trait' href='https://doc.rust-lang.org/nightly/core/marker/trait.Sized.html' title='core::marker::Sized'>Sized</a>, F: <a class='trait' href='../../filters/filter/trait.IntoFilter.html' title='filters::filter::IntoFilter'>IntoFilter</a>&lt;N&gt; + <a class='trait' href='https://doc.rust-lang.org/nightly/core/marker/trait.Sized.html' title='core::marker::Sized'>Sized</a>, F2: <a class='trait' href='../../filters/filter/trait.IntoFilter.html' title='filters::filter::IntoFilter'>IntoFilter</a>&lt;N&gt; + <a class='trait' href='https://doc.rust-lang.org/nightly/core/marker/trait.Sized.html' title='core::marker::Sized'>Sized</a></span> { ... }
+    fn <a href='#method.nor' class='fnname'>nor</a>&lt;F&gt;(self, other: F) -&gt; <a class='struct' href='../../filters/ops/not/struct.Not.html' title='filters::ops::not::Not'>Not</a>&lt;<a class='struct' href='../../filters/ops/or/struct.Or.html' title='filters::ops::or::Or'>Or</a>&lt;Self,&nbsp;F&gt;&gt; <span class='where'>where Self: <a class='trait' href='https://doc.rust-lang.org/nightly/core/marker/trait.Sized.html' title='core::marker::Sized'>Sized</a></span> { ... }
+    fn <a href='#method.xor' class='fnname'>xor</a>&lt;F&gt;(self, other: F) -&gt; <a class='struct' href='../../filters/ops/xor/struct.XOr.html' title='filters::ops::xor::XOr'>XOr</a>&lt;Self,&nbsp;F&gt; <span class='where'>where Self: <a class='trait' href='https://doc.rust-lang.org/nightly/core/marker/trait.Sized.html' title='core::marker::Sized'>Sized</a></span> { ... }
+    fn <a href='#method.and' class='fnname'>and</a>&lt;F&gt;(self, other: F) -&gt; <a class='struct' href='../../filters/ops/and/struct.And.html' title='filters::ops::and::And'>And</a>&lt;Self,&nbsp;F::IntoFilt&gt; <span class='where'>where Self: <a class='trait' href='https://doc.rust-lang.org/nightly/core/marker/trait.Sized.html' title='core::marker::Sized'>Sized</a>, F: <a class='trait' href='../../filters/filter/trait.IntoFilter.html' title='filters::filter::IntoFilter'>IntoFilter</a>&lt;N&gt; + <a class='trait' href='https://doc.rust-lang.org/nightly/core/marker/trait.Sized.html' title='core::marker::Sized'>Sized</a></span> { ... }
+    fn <a href='#method.and3' class='fnname'>and3</a>&lt;F,&nbsp;F2&gt;(self, other: F, other2: F2) -&gt; <a class='struct' href='../../filters/ops/and/struct.And.html' title='filters::ops::and::And'>And</a>&lt;Self,&nbsp;<a class='struct' href='../../filters/ops/and/struct.And.html' title='filters::ops::and::And'>And</a>&lt;F::IntoFilt,&nbsp;F2::IntoFilt&gt;&gt; <span class='where'>where Self: <a class='trait' href='https://doc.rust-lang.org/nightly/core/marker/trait.Sized.html' title='core::marker::Sized'>Sized</a>, F: <a class='trait' href='../../filters/filter/trait.IntoFilter.html' title='filters::filter::IntoFilter'>IntoFilter</a>&lt;N&gt; + <a class='trait' href='https://doc.rust-lang.org/nightly/core/marker/trait.Sized.html' title='core::marker::Sized'>Sized</a>, F2: <a class='trait' href='../../filters/filter/trait.IntoFilter.html' title='filters::filter::IntoFilter'>IntoFilter</a>&lt;N&gt; + <a class='trait' href='https://doc.rust-lang.org/nightly/core/marker/trait.Sized.html' title='core::marker::Sized'>Sized</a></span> { ... }
+    fn <a href='#method.and_not' class='fnname'>and_not</a>&lt;F&gt;(self, other: F) -&gt; <a class='struct' href='../../filters/ops/and/struct.And.html' title='filters::ops::and::And'>And</a>&lt;Self,&nbsp;<a class='struct' href='../../filters/ops/not/struct.Not.html' title='filters::ops::not::Not'>Not</a>&lt;F::IntoFilt&gt;&gt; <span class='where'>where Self: <a class='trait' href='https://doc.rust-lang.org/nightly/core/marker/trait.Sized.html' title='core::marker::Sized'>Sized</a>, F: <a class='trait' href='../../filters/filter/trait.IntoFilter.html' title='filters::filter::IntoFilter'>IntoFilter</a>&lt;N&gt; + <a class='trait' href='https://doc.rust-lang.org/nightly/core/marker/trait.Sized.html' title='core::marker::Sized'>Sized</a></span> { ... }
+    fn <a href='#method.nand' class='fnname'>nand</a>&lt;F&gt;(self, other: F) -&gt; <a class='struct' href='../../filters/ops/not/struct.Not.html' title='filters::ops::not::Not'>Not</a>&lt;<a class='struct' href='../../filters/ops/and/struct.And.html' title='filters::ops::and::And'>And</a>&lt;Self,&nbsp;F&gt;&gt; <span class='where'>where Self: <a class='trait' href='https://doc.rust-lang.org/nightly/core/marker/trait.Sized.html' title='core::marker::Sized'>Sized</a></span> { ... }
+}</pre><div class='docblock'><p>The filter trai</p>
+</div>
+            <h2 id='required-methods'>Required Methods</h2>
+            <div class='methods'>
+        <h3 id='tymethod.filter' class='method stab '><code>fn <a href='#tymethod.filter' class='fnname'>filter</a>(&amp;self, &amp;N) -&gt; <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code></h3><div class='docblock'><p>The function which is used to filter something</p>
+</div></div>
+            <h2 id='provided-methods'>Provided Methods</h2>
+            <div class='methods'>
+        <h3 id='method.not' class='method stab '><code>fn <a href='#method.not' class='fnname'>not</a>(self) -&gt; <a class='struct' href='../../filters/ops/not/struct.Not.html' title='filters::ops::not::Not'>Not</a>&lt;Self&gt; <span class='where'>where Self: <a class='trait' href='https://doc.rust-lang.org/nightly/core/marker/trait.Sized.html' title='core::marker::Sized'>Sized</a></span></code></h3><div class='docblock'><p>Helper to invert a filter.</p>
+
+<pre class='rust rust-example-rendered'>
+<span class='kw'>use</span> <span class='ident'>filters</span>::<span class='ident'>filter</span>::<span class='ident'>Filter</span>;
+
+<span class='kw'>let</span> <span class='ident'>f</span> <span class='op'>=</span> (<span class='op'>|</span><span class='kw-2'>&amp;</span><span class='ident'>a</span>: <span class='kw-2'>&amp;</span><span class='ident'>usize</span><span class='op'>|</span> { <span class='ident'>a</span> <span class='op'>==</span> <span class='number'>1</span> }).<span class='ident'>not</span>();
+
+<span class='macro'>assert</span><span class='macro'>!</span>(<span class='ident'>f</span>.<span class='ident'>filter</span>(<span class='kw-2'>&amp;</span><span class='number'>2</span>));</pre>
+</div><h3 id='method.or' class='method stab '><code>fn <a href='#method.or' class='fnname'>or</a>&lt;F&gt;(self, other: F) -&gt; <a class='struct' href='../../filters/ops/or/struct.Or.html' title='filters::ops::or::Or'>Or</a>&lt;Self,&nbsp;F::IntoFilt&gt; <span class='where'>where Self: <a class='trait' href='https://doc.rust-lang.org/nightly/core/marker/trait.Sized.html' title='core::marker::Sized'>Sized</a>, F: <a class='trait' href='../../filters/filter/trait.IntoFilter.html' title='filters::filter::IntoFilter'>IntoFilter</a>&lt;N&gt; + <a class='trait' href='https://doc.rust-lang.org/nightly/core/marker/trait.Sized.html' title='core::marker::Sized'>Sized</a></span></code></h3><div class='docblock'><p>Helper to connect two filters via logical OR</p>
+
+<pre class='rust rust-example-rendered'>
+<span class='kw'>use</span> <span class='ident'>filters</span>::<span class='ident'>filter</span>::<span class='ident'>Filter</span>;
+
+<span class='kw'>let</span> <span class='ident'>a</span> <span class='op'>=</span> (<span class='op'>|</span><span class='kw-2'>&amp;</span><span class='ident'>a</span>: <span class='kw-2'>&amp;</span><span class='ident'>usize</span><span class='op'>|</span> { <span class='ident'>a</span> <span class='op'>==</span> <span class='number'>1</span> });
+<span class='kw'>let</span> <span class='ident'>b</span> <span class='op'>=</span> (<span class='op'>|</span><span class='kw-2'>&amp;</span><span class='ident'>a</span>: <span class='kw-2'>&amp;</span><span class='ident'>usize</span><span class='op'>|</span> { <span class='ident'>a</span> <span class='op'>==</span> <span class='number'>2</span> });
+<span class='kw'>let</span> <span class='ident'>c</span> <span class='op'>=</span> <span class='ident'>a</span>.<span class='ident'>or</span>(<span class='ident'>b</span>);
+
+<span class='macro'>assert</span><span class='macro'>!</span>(<span class='ident'>c</span>.<span class='ident'>filter</span>(<span class='kw-2'>&amp;</span><span class='number'>1</span>));
+<span class='macro'>assert</span><span class='macro'>!</span>(<span class='ident'>c</span>.<span class='ident'>filter</span>(<span class='kw-2'>&amp;</span><span class='number'>2</span>));
+<span class='macro'>assert</span><span class='macro'>!</span>(<span class='op'>!</span><span class='ident'>c</span>.<span class='ident'>filter</span>(<span class='kw-2'>&amp;</span><span class='number'>7</span>));</pre>
+</div><h3 id='method.or_not' class='method stab '><code>fn <a href='#method.or_not' class='fnname'>or_not</a>&lt;F&gt;(self, other: F) -&gt; <a class='struct' href='../../filters/ops/or/struct.Or.html' title='filters::ops::or::Or'>Or</a>&lt;Self,&nbsp;<a class='struct' href='../../filters/ops/not/struct.Not.html' title='filters::ops::not::Not'>Not</a>&lt;F::IntoFilt&gt;&gt; <span class='where'>where Self: <a class='trait' href='https://doc.rust-lang.org/nightly/core/marker/trait.Sized.html' title='core::marker::Sized'>Sized</a>, F: <a class='trait' href='../../filters/filter/trait.IntoFilter.html' title='filters::filter::IntoFilter'>IntoFilter</a>&lt;N&gt; + <a class='trait' href='https://doc.rust-lang.org/nightly/core/marker/trait.Sized.html' title='core::marker::Sized'>Sized</a></span></code></h3><div class='docblock'><p>Helper to connect two filters via logical OR and NOT</p>
+
+<pre class='rust rust-example-rendered'>
+<span class='kw'>use</span> <span class='ident'>filters</span>::<span class='ident'>filter</span>::<span class='ident'>Filter</span>;
+
+<span class='kw'>let</span> <span class='ident'>a</span> <span class='op'>=</span> (<span class='op'>|</span><span class='kw-2'>&amp;</span><span class='ident'>a</span>: <span class='kw-2'>&amp;</span><span class='ident'>usize</span><span class='op'>|</span> { <span class='ident'>a</span> <span class='op'>==</span> <span class='number'>1</span> });
+<span class='kw'>let</span> <span class='ident'>b</span> <span class='op'>=</span> (<span class='op'>|</span><span class='kw-2'>&amp;</span><span class='ident'>a</span>: <span class='kw-2'>&amp;</span><span class='ident'>usize</span><span class='op'>|</span> { <span class='ident'>a</span> <span class='op'>==</span> <span class='number'>2</span> });
+<span class='kw'>let</span> <span class='ident'>c</span> <span class='op'>=</span> <span class='ident'>a</span>.<span class='ident'>or_not</span>(<span class='ident'>b</span>);
+
+<span class='macro'>assert</span><span class='macro'>!</span>(<span class='ident'>c</span>.<span class='ident'>filter</span>(<span class='kw-2'>&amp;</span><span class='number'>1</span>));
+<span class='macro'>assert</span><span class='macro'>!</span>(<span class='op'>!</span><span class='ident'>c</span>.<span class='ident'>filter</span>(<span class='kw-2'>&amp;</span><span class='number'>2</span>));
+<span class='macro'>assert</span><span class='macro'>!</span>(<span class='ident'>c</span>.<span class='ident'>filter</span>(<span class='kw-2'>&amp;</span><span class='number'>7</span>));</pre>
+</div><h3 id='method.or3' class='method stab '><code>fn <a href='#method.or3' class='fnname'>or3</a>&lt;F,&nbsp;F2&gt;(self, other: F, other2: F2) -&gt; <a class='struct' href='../../filters/ops/or/struct.Or.html' title='filters::ops::or::Or'>Or</a>&lt;Self,&nbsp;<a class='struct' href='../../filters/ops/or/struct.Or.html' title='filters::ops::or::Or'>Or</a>&lt;F::IntoFilt,&nbsp;F2::IntoFilt&gt;&gt; <span class='where'>where Self: <a class='trait' href='https://doc.rust-lang.org/nightly/core/marker/trait.Sized.html' title='core::marker::Sized'>Sized</a>, F: <a class='trait' href='../../filters/filter/trait.IntoFilter.html' title='filters::filter::IntoFilter'>IntoFilter</a>&lt;N&gt; + <a class='trait' href='https://doc.rust-lang.org/nightly/core/marker/trait.Sized.html' title='core::marker::Sized'>Sized</a>, F2: <a class='trait' href='../../filters/filter/trait.IntoFilter.html' title='filters::filter::IntoFilter'>IntoFilter</a>&lt;N&gt; + <a class='trait' href='https://doc.rust-lang.org/nightly/core/marker/trait.Sized.html' title='core::marker::Sized'>Sized</a></span></code></h3><div class='docblock'><p>Helper to connect three filters via logical OR</p>
+
+<pre class='rust rust-example-rendered'>
+<span class='kw'>use</span> <span class='ident'>filters</span>::<span class='ident'>filter</span>::<span class='ident'>Filter</span>;
+
+<span class='kw'>let</span> <span class='ident'>a</span> <span class='op'>=</span> (<span class='op'>|</span><span class='kw-2'>&amp;</span><span class='ident'>a</span>: <span class='kw-2'>&amp;</span><span class='ident'>usize</span><span class='op'>|</span> { <span class='ident'>a</span> <span class='op'>==</span> <span class='number'>1</span> });
+<span class='kw'>let</span> <span class='ident'>b</span> <span class='op'>=</span> (<span class='op'>|</span><span class='kw-2'>&amp;</span><span class='ident'>a</span>: <span class='kw-2'>&amp;</span><span class='ident'>usize</span><span class='op'>|</span> { <span class='ident'>a</span> <span class='op'>==</span> <span class='number'>2</span> });
+<span class='kw'>let</span> <span class='ident'>c</span> <span class='op'>=</span> (<span class='op'>|</span><span class='kw-2'>&amp;</span><span class='ident'>a</span>: <span class='kw-2'>&amp;</span><span class='ident'>usize</span><span class='op'>|</span> { <span class='ident'>a</span> <span class='op'>==</span> <span class='number'>3</span> });
+<span class='kw'>let</span> <span class='ident'>d</span> <span class='op'>=</span> <span class='ident'>a</span>.<span class='ident'>or3</span>(<span class='ident'>b</span>, <span class='ident'>c</span>);
+
+<span class='macro'>assert</span><span class='macro'>!</span>(<span class='ident'>d</span>.<span class='ident'>filter</span>(<span class='kw-2'>&amp;</span><span class='number'>1</span>));
+<span class='macro'>assert</span><span class='macro'>!</span>(<span class='ident'>d</span>.<span class='ident'>filter</span>(<span class='kw-2'>&amp;</span><span class='number'>2</span>));
+<span class='macro'>assert</span><span class='macro'>!</span>(<span class='ident'>d</span>.<span class='ident'>filter</span>(<span class='kw-2'>&amp;</span><span class='number'>3</span>));
+<span class='macro'>assert</span><span class='macro'>!</span>(<span class='op'>!</span><span class='ident'>d</span>.<span class='ident'>filter</span>(<span class='kw-2'>&amp;</span><span class='number'>4</span>));</pre>
+</div><h3 id='method.nor' class='method stab '><code>fn <a href='#method.nor' class='fnname'>nor</a>&lt;F&gt;(self, other: F) -&gt; <a class='struct' href='../../filters/ops/not/struct.Not.html' title='filters::ops::not::Not'>Not</a>&lt;<a class='struct' href='../../filters/ops/or/struct.Or.html' title='filters::ops::or::Or'>Or</a>&lt;Self,&nbsp;F&gt;&gt; <span class='where'>where Self: <a class='trait' href='https://doc.rust-lang.org/nightly/core/marker/trait.Sized.html' title='core::marker::Sized'>Sized</a></span></code></h3><div class='docblock'><p>Helper to connect two filters via logical NOR</p>
+
+<pre class='rust rust-example-rendered'>
+<span class='kw'>use</span> <span class='ident'>filters</span>::<span class='ident'>filter</span>::<span class='ident'>Filter</span>;
+
+<span class='kw'>let</span> <span class='ident'>a</span> <span class='op'>=</span> (<span class='op'>|</span><span class='kw-2'>&amp;</span><span class='ident'>a</span>: <span class='kw-2'>&amp;</span><span class='ident'>usize</span><span class='op'>|</span> { <span class='ident'>a</span> <span class='op'>==</span> <span class='number'>1</span> });
+<span class='kw'>let</span> <span class='ident'>b</span> <span class='op'>=</span> (<span class='op'>|</span><span class='kw-2'>&amp;</span><span class='ident'>a</span>: <span class='kw-2'>&amp;</span><span class='ident'>usize</span><span class='op'>|</span> { <span class='ident'>a</span> <span class='op'>==</span> <span class='number'>2</span> });
+<span class='kw'>let</span> <span class='ident'>c</span> <span class='op'>=</span> <span class='ident'>a</span>.<span class='ident'>nor</span>(<span class='ident'>b</span>); <span class='comment'>/* !(a == 1 || a == 2) */</span>
+
+<span class='macro'>assert</span><span class='macro'>!</span>(<span class='op'>!</span><span class='ident'>c</span>.<span class='ident'>filter</span>(<span class='kw-2'>&amp;</span><span class='number'>1</span>));
+<span class='macro'>assert</span><span class='macro'>!</span>(<span class='op'>!</span><span class='ident'>c</span>.<span class='ident'>filter</span>(<span class='kw-2'>&amp;</span><span class='number'>2</span>));
+<span class='macro'>assert</span><span class='macro'>!</span>(<span class='ident'>c</span>.<span class='ident'>filter</span>(<span class='kw-2'>&amp;</span><span class='number'>3</span>));
+<span class='macro'>assert</span><span class='macro'>!</span>(<span class='ident'>c</span>.<span class='ident'>filter</span>(<span class='kw-2'>&amp;</span><span class='number'>4</span>));</pre>
+</div><h3 id='method.xor' class='method stab '><code>fn <a href='#method.xor' class='fnname'>xor</a>&lt;F&gt;(self, other: F) -&gt; <a class='struct' href='../../filters/ops/xor/struct.XOr.html' title='filters::ops::xor::XOr'>XOr</a>&lt;Self,&nbsp;F&gt; <span class='where'>where Self: <a class='trait' href='https://doc.rust-lang.org/nightly/core/marker/trait.Sized.html' title='core::marker::Sized'>Sized</a></span></code></h3><div class='docblock'><p>Helper to connect two filters via logical XOR</p>
+
+<pre class='rust rust-example-rendered'>
+<span class='kw'>use</span> <span class='ident'>filters</span>::<span class='ident'>filter</span>::<span class='ident'>Filter</span>;
+
+<span class='kw'>let</span> <span class='ident'>a</span> <span class='op'>=</span> (<span class='op'>|</span><span class='kw-2'>&amp;</span><span class='ident'>a</span>: <span class='kw-2'>&amp;</span><span class='ident'>usize</span><span class='op'>|</span> { <span class='ident'>a</span> <span class='op'>&gt;</span> <span class='number'>3</span> });
+<span class='kw'>let</span> <span class='ident'>b</span> <span class='op'>=</span> (<span class='op'>|</span><span class='kw-2'>&amp;</span><span class='ident'>a</span>: <span class='kw-2'>&amp;</span><span class='ident'>usize</span><span class='op'>|</span> { <span class='ident'>a</span> <span class='op'>&lt;</span> <span class='number'>7</span> });
+<span class='kw'>let</span> <span class='ident'>c</span> <span class='op'>=</span> <span class='ident'>a</span>.<span class='ident'>xor</span>(<span class='ident'>b</span>);
+
+<span class='macro'>assert</span><span class='macro'>!</span>(<span class='ident'>c</span>.<span class='ident'>filter</span>(<span class='kw-2'>&amp;</span><span class='number'>1</span>));
+<span class='macro'>assert</span><span class='macro'>!</span>(<span class='ident'>c</span>.<span class='ident'>filter</span>(<span class='kw-2'>&amp;</span><span class='number'>3</span>));
+<span class='macro'>assert</span><span class='macro'>!</span>(<span class='op'>!</span><span class='ident'>c</span>.<span class='ident'>filter</span>(<span class='kw-2'>&amp;</span><span class='number'>4</span>));
+<span class='macro'>assert</span><span class='macro'>!</span>(<span class='op'>!</span><span class='ident'>c</span>.<span class='ident'>filter</span>(<span class='kw-2'>&amp;</span><span class='number'>6</span>));
+<span class='macro'>assert</span><span class='macro'>!</span>(<span class='ident'>c</span>.<span class='ident'>filter</span>(<span class='kw-2'>&amp;</span><span class='number'>9</span>));</pre>
+</div><h3 id='method.and' class='method stab '><code>fn <a href='#method.and' class='fnname'>and</a>&lt;F&gt;(self, other: F) -&gt; <a class='struct' href='../../filters/ops/and/struct.And.html' title='filters::ops::and::And'>And</a>&lt;Self,&nbsp;F::IntoFilt&gt; <span class='where'>where Self: <a class='trait' href='https://doc.rust-lang.org/nightly/core/marker/trait.Sized.html' title='core::marker::Sized'>Sized</a>, F: <a class='trait' href='../../filters/filter/trait.IntoFilter.html' title='filters::filter::IntoFilter'>IntoFilter</a>&lt;N&gt; + <a class='trait' href='https://doc.rust-lang.org/nightly/core/marker/trait.Sized.html' title='core::marker::Sized'>Sized</a></span></code></h3><div class='docblock'><p>Helper to connect two filters via logical AND</p>
+
+<pre class='rust rust-example-rendered'>
+<span class='kw'>use</span> <span class='ident'>filters</span>::<span class='ident'>filter</span>::<span class='ident'>Filter</span>;
+
+<span class='kw'>let</span> <span class='ident'>a</span> <span class='op'>=</span> (<span class='op'>|</span><span class='kw-2'>&amp;</span><span class='ident'>a</span>: <span class='kw-2'>&amp;</span><span class='ident'>usize</span><span class='op'>|</span> { <span class='ident'>a</span> <span class='op'>&gt;</span> <span class='number'>1</span> });
+<span class='kw'>let</span> <span class='ident'>b</span> <span class='op'>=</span> (<span class='op'>|</span><span class='kw-2'>&amp;</span><span class='ident'>a</span>: <span class='kw-2'>&amp;</span><span class='ident'>usize</span><span class='op'>|</span> { <span class='ident'>a</span> <span class='op'>&lt;</span> <span class='number'>7</span> });
+<span class='kw'>let</span> <span class='ident'>c</span> <span class='op'>=</span> <span class='ident'>a</span>.<span class='ident'>and</span>(<span class='ident'>b</span>);
+
+<span class='macro'>assert</span><span class='macro'>!</span>(<span class='op'>!</span><span class='ident'>c</span>.<span class='ident'>filter</span>(<span class='kw-2'>&amp;</span><span class='number'>1</span>));
+<span class='macro'>assert</span><span class='macro'>!</span>(<span class='ident'>c</span>.<span class='ident'>filter</span>(<span class='kw-2'>&amp;</span><span class='number'>3</span>));
+<span class='macro'>assert</span><span class='macro'>!</span>(<span class='ident'>c</span>.<span class='ident'>filter</span>(<span class='kw-2'>&amp;</span><span class='number'>4</span>));
+<span class='macro'>assert</span><span class='macro'>!</span>(<span class='ident'>c</span>.<span class='ident'>filter</span>(<span class='kw-2'>&amp;</span><span class='number'>6</span>));
+<span class='macro'>assert</span><span class='macro'>!</span>(<span class='op'>!</span><span class='ident'>c</span>.<span class='ident'>filter</span>(<span class='kw-2'>&amp;</span><span class='number'>9</span>));</pre>
+</div><h3 id='method.and3' class='method stab '><code>fn <a href='#method.and3' class='fnname'>and3</a>&lt;F,&nbsp;F2&gt;(self, other: F, other2: F2) -&gt; <a class='struct' href='../../filters/ops/and/struct.And.html' title='filters::ops::and::And'>And</a>&lt;Self,&nbsp;<a class='struct' href='../../filters/ops/and/struct.And.html' title='filters::ops::and::And'>And</a>&lt;F::IntoFilt,&nbsp;F2::IntoFilt&gt;&gt; <span class='where'>where Self: <a class='trait' href='https://doc.rust-lang.org/nightly/core/marker/trait.Sized.html' title='core::marker::Sized'>Sized</a>, F: <a class='trait' href='../../filters/filter/trait.IntoFilter.html' title='filters::filter::IntoFilter'>IntoFilter</a>&lt;N&gt; + <a class='trait' href='https://doc.rust-lang.org/nightly/core/marker/trait.Sized.html' title='core::marker::Sized'>Sized</a>, F2: <a class='trait' href='../../filters/filter/trait.IntoFilter.html' title='filters::filter::IntoFilter'>IntoFilter</a>&lt;N&gt; + <a class='trait' href='https://doc.rust-lang.org/nightly/core/marker/trait.Sized.html' title='core::marker::Sized'>Sized</a></span></code></h3><div class='docblock'><p>Helper to connect three filters via logical AND</p>
+
+<pre class='rust rust-example-rendered'>
+<span class='kw'>use</span> <span class='ident'>filters</span>::<span class='ident'>filter</span>::<span class='ident'>Filter</span>;
+
+<span class='kw'>let</span> <span class='ident'>a</span> <span class='op'>=</span> (<span class='op'>|</span><span class='kw-2'>&amp;</span><span class='ident'>a</span>: <span class='kw-2'>&amp;</span><span class='ident'>usize</span><span class='op'>|</span> { <span class='ident'>a</span> <span class='op'>&gt;</span> <span class='number'>1</span> });
+<span class='kw'>let</span> <span class='ident'>b</span> <span class='op'>=</span> (<span class='op'>|</span><span class='kw-2'>&amp;</span><span class='ident'>a</span>: <span class='kw-2'>&amp;</span><span class='ident'>usize</span><span class='op'>|</span> { <span class='ident'>a</span> <span class='op'>&lt;</span> <span class='number'>20</span> });
+<span class='kw'>let</span> <span class='ident'>c</span> <span class='op'>=</span> (<span class='op'>|</span><span class='kw-2'>&amp;</span><span class='ident'>a</span>: <span class='kw-2'>&amp;</span><span class='ident'>usize</span><span class='op'>|</span> { <span class='ident'>a</span> <span class='op'>%</span> <span class='number'>2</span> <span class='op'>==</span> <span class='number'>0</span> });
+<span class='kw'>let</span> <span class='ident'>d</span> <span class='op'>=</span> <span class='ident'>a</span>.<span class='ident'>and3</span>(<span class='ident'>b</span>, <span class='ident'>c</span>);
+
+<span class='macro'>assert</span><span class='macro'>!</span>(<span class='op'>!</span><span class='ident'>d</span>.<span class='ident'>filter</span>(<span class='kw-2'>&amp;</span><span class='number'>1</span>));
+<span class='macro'>assert</span><span class='macro'>!</span>(<span class='op'>!</span><span class='ident'>d</span>.<span class='ident'>filter</span>(<span class='kw-2'>&amp;</span><span class='number'>3</span>));
+<span class='macro'>assert</span><span class='macro'>!</span>(<span class='ident'>d</span>.<span class='ident'>filter</span>(<span class='kw-2'>&amp;</span><span class='number'>8</span>));
+<span class='macro'>assert</span><span class='macro'>!</span>(<span class='ident'>d</span>.<span class='ident'>filter</span>(<span class='kw-2'>&amp;</span><span class='number'>10</span>));
+<span class='macro'>assert</span><span class='macro'>!</span>(<span class='ident'>d</span>.<span class='ident'>filter</span>(<span class='kw-2'>&amp;</span><span class='number'>14</span>));
+<span class='macro'>assert</span><span class='macro'>!</span>(<span class='op'>!</span><span class='ident'>d</span>.<span class='ident'>filter</span>(<span class='kw-2'>&amp;</span><span class='number'>15</span>));
+<span class='macro'>assert</span><span class='macro'>!</span>(<span class='op'>!</span><span class='ident'>d</span>.<span class='ident'>filter</span>(<span class='kw-2'>&amp;</span><span class='number'>19</span>));</pre>
+</div><h3 id='method.and_not' class='method stab '><code>fn <a href='#method.and_not' class='fnname'>and_not</a>&lt;F&gt;(self, other: F) -&gt; <a class='struct' href='../../filters/ops/and/struct.And.html' title='filters::ops::and::And'>And</a>&lt;Self,&nbsp;<a class='struct' href='../../filters/ops/not/struct.Not.html' title='filters::ops::not::Not'>Not</a>&lt;F::IntoFilt&gt;&gt; <span class='where'>where Self: <a class='trait' href='https://doc.rust-lang.org/nightly/core/marker/trait.Sized.html' title='core::marker::Sized'>Sized</a>, F: <a class='trait' href='../../filters/filter/trait.IntoFilter.html' title='filters::filter::IntoFilter'>IntoFilter</a>&lt;N&gt; + <a class='trait' href='https://doc.rust-lang.org/nightly/core/marker/trait.Sized.html' title='core::marker::Sized'>Sized</a></span></code></h3><div class='docblock'><p>Helper to connect two filters via logical AND and NOT</p>
+
+<pre class='rust rust-example-rendered'>
+<span class='kw'>use</span> <span class='ident'>filters</span>::<span class='ident'>filter</span>::<span class='ident'>Filter</span>;
+
+<span class='kw'>let</span> <span class='ident'>a</span> <span class='op'>=</span> (<span class='op'>|</span><span class='kw-2'>&amp;</span><span class='ident'>a</span>: <span class='kw-2'>&amp;</span><span class='ident'>usize</span><span class='op'>|</span> { <span class='ident'>a</span> <span class='op'>&gt;</span> <span class='number'>10</span> });
+<span class='kw'>let</span> <span class='ident'>b</span> <span class='op'>=</span> (<span class='op'>|</span><span class='kw-2'>&amp;</span><span class='ident'>a</span>: <span class='kw-2'>&amp;</span><span class='ident'>usize</span><span class='op'>|</span> { <span class='ident'>a</span> <span class='op'>&lt;</span> <span class='number'>20</span> });
+<span class='kw'>let</span> <span class='ident'>c</span> <span class='op'>=</span> <span class='ident'>a</span>.<span class='ident'>and_not</span>(<span class='ident'>b</span>);
+
+<span class='macro'>assert</span><span class='macro'>!</span>(<span class='op'>!</span><span class='ident'>c</span>.<span class='ident'>filter</span>(<span class='kw-2'>&amp;</span><span class='number'>1</span>));
+<span class='macro'>assert</span><span class='macro'>!</span>(<span class='op'>!</span><span class='ident'>c</span>.<span class='ident'>filter</span>(<span class='kw-2'>&amp;</span><span class='number'>3</span>));
+<span class='macro'>assert</span><span class='macro'>!</span>(<span class='op'>!</span><span class='ident'>c</span>.<span class='ident'>filter</span>(<span class='kw-2'>&amp;</span><span class='number'>8</span>));
+<span class='macro'>assert</span><span class='macro'>!</span>(<span class='op'>!</span><span class='ident'>c</span>.<span class='ident'>filter</span>(<span class='kw-2'>&amp;</span><span class='number'>11</span>));
+<span class='macro'>assert</span><span class='macro'>!</span>(<span class='ident'>c</span>.<span class='ident'>filter</span>(<span class='kw-2'>&amp;</span><span class='number'>24</span>));
+<span class='macro'>assert</span><span class='macro'>!</span>(<span class='ident'>c</span>.<span class='ident'>filter</span>(<span class='kw-2'>&amp;</span><span class='number'>25</span>));
+<span class='macro'>assert</span><span class='macro'>!</span>(<span class='ident'>c</span>.<span class='ident'>filter</span>(<span class='kw-2'>&amp;</span><span class='number'>29</span>));</pre>
+</div><h3 id='method.nand' class='method stab '><code>fn <a href='#method.nand' class='fnname'>nand</a>&lt;F&gt;(self, other: F) -&gt; <a class='struct' href='../../filters/ops/not/struct.Not.html' title='filters::ops::not::Not'>Not</a>&lt;<a class='struct' href='../../filters/ops/and/struct.And.html' title='filters::ops::and::And'>And</a>&lt;Self,&nbsp;F&gt;&gt; <span class='where'>where Self: <a class='trait' href='https://doc.rust-lang.org/nightly/core/marker/trait.Sized.html' title='core::marker::Sized'>Sized</a></span></code></h3><div class='docblock'><p>Helper to connect two filters via logical NAND</p>
+
+<pre class='rust rust-example-rendered'>
+<span class='kw'>use</span> <span class='ident'>filters</span>::<span class='ident'>filter</span>::<span class='ident'>Filter</span>;
+
+<span class='kw'>let</span> <span class='ident'>a</span> <span class='op'>=</span> (<span class='op'>|</span><span class='kw-2'>&amp;</span><span class='ident'>a</span>: <span class='kw-2'>&amp;</span><span class='ident'>usize</span><span class='op'>|</span> { <span class='ident'>a</span> <span class='op'>&gt;</span> <span class='number'>10</span> });
+<span class='kw'>let</span> <span class='ident'>b</span> <span class='op'>=</span> (<span class='op'>|</span><span class='kw-2'>&amp;</span><span class='ident'>a</span>: <span class='kw-2'>&amp;</span><span class='ident'>usize</span><span class='op'>|</span> { <span class='ident'>a</span> <span class='op'>&lt;</span> <span class='number'>20</span> });
+<span class='kw'>let</span> <span class='ident'>c</span> <span class='op'>=</span> <span class='ident'>a</span>.<span class='ident'>nand</span>(<span class='ident'>b</span>);
+
+<span class='macro'>assert</span><span class='macro'>!</span>(<span class='ident'>c</span>.<span class='ident'>filter</span>(<span class='kw-2'>&amp;</span><span class='number'>1</span>));
+<span class='macro'>assert</span><span class='macro'>!</span>(<span class='ident'>c</span>.<span class='ident'>filter</span>(<span class='kw-2'>&amp;</span><span class='number'>3</span>));
+<span class='macro'>assert</span><span class='macro'>!</span>(<span class='ident'>c</span>.<span class='ident'>filter</span>(<span class='kw-2'>&amp;</span><span class='number'>8</span>));
+<span class='macro'>assert</span><span class='macro'>!</span>(<span class='op'>!</span><span class='ident'>c</span>.<span class='ident'>filter</span>(<span class='kw-2'>&amp;</span><span class='number'>11</span>));
+<span class='macro'>assert</span><span class='macro'>!</span>(<span class='op'>!</span><span class='ident'>c</span>.<span class='ident'>filter</span>(<span class='kw-2'>&amp;</span><span class='number'>14</span>));
+<span class='macro'>assert</span><span class='macro'>!</span>(<span class='ident'>c</span>.<span class='ident'>filter</span>(<span class='kw-2'>&amp;</span><span class='number'>25</span>));
+<span class='macro'>assert</span><span class='macro'>!</span>(<span class='ident'>c</span>.<span class='ident'>filter</span>(<span class='kw-2'>&amp;</span><span class='number'>29</span>));</pre>
+</div></div>
+        <h2 id='implementors'>Implementors</h2>
+        <ul class='item-list' id='implementors-list'>
+    <li><code>impl&lt;I,&nbsp;T:&nbsp;<a class='trait' href='https://doc.rust-lang.org/nightly/core/ops/trait.Fn.html' title='core::ops::Fn'>Fn</a>(&amp;I) -&gt; <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a>&gt; Filter&lt;I&gt; for T</code></li>
+<li><code>impl&lt;I,&nbsp;T:&nbsp;<a class='trait' href='../../filters/filter/trait.Filter.html' title='filters::filter::Filter'>Filter</a>&lt;I&gt;,&nbsp;U:&nbsp;<a class='trait' href='../../filters/filter/trait.Filter.html' title='filters::filter::Filter'>Filter</a>&lt;I&gt;&gt; Filter&lt;I&gt; for <a class='struct' href='../../filters/ops/and/struct.And.html' title='filters::ops::and::And'>And</a>&lt;T,&nbsp;U&gt;</code></li>
+<li><code>impl&lt;I&gt; Filter&lt;I&gt; for <a class='struct' href='../../filters/ops/bool/struct.Bool.html' title='filters::ops::bool::Bool'>Bool</a></code></li>
+<li><code>impl&lt;I,&nbsp;T:&nbsp;<a class='trait' href='../../filters/filter/trait.Filter.html' title='filters::filter::Filter'>Filter</a>&lt;I&gt;&gt; Filter&lt;I&gt; for <a class='struct' href='../../filters/ops/not/struct.Not.html' title='filters::ops::not::Not'>Not</a>&lt;T&gt;</code></li>
+<li><code>impl&lt;I,&nbsp;T:&nbsp;<a class='trait' href='../../filters/filter/trait.Filter.html' title='filters::filter::Filter'>Filter</a>&lt;I&gt;,&nbsp;U:&nbsp;<a class='trait' href='../../filters/filter/trait.Filter.html' title='filters::filter::Filter'>Filter</a>&lt;I&gt;&gt; Filter&lt;I&gt; for <a class='struct' href='../../filters/ops/or/struct.Or.html' title='filters::ops::or::Or'>Or</a>&lt;T,&nbsp;U&gt;</code></li>
+<li><code>impl&lt;I,&nbsp;T:&nbsp;<a class='trait' href='../../filters/filter/trait.Filter.html' title='filters::filter::Filter'>Filter</a>&lt;I&gt;,&nbsp;U:&nbsp;<a class='trait' href='../../filters/filter/trait.Filter.html' title='filters::filter::Filter'>Filter</a>&lt;I&gt;&gt; Filter&lt;I&gt; for <a class='struct' href='../../filters/ops/xor/struct.XOr.html' title='filters::ops::xor::XOr'>XOr</a>&lt;T,&nbsp;U&gt;</code></li>
+</ul><script type="text/javascript" async
+                         src="../../implementors/filters/filter/trait.Filter.js">
+                 </script></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <aside id="help" class="hidden">
+        <div>
+            <h1 class="hidden">Help</h1>
+
+            <div class="shortcuts">
+                <h2>Keyboard Shortcuts</h2>
+
+                <dl>
+                    <dt>?</dt>
+                    <dd>Show this help dialog</dd>
+                    <dt>S</dt>
+                    <dd>Focus the search field</dd>
+                    <dt>&larrb;</dt>
+                    <dd>Move up in search results</dd>
+                    <dt>&rarrb;</dt>
+                    <dd>Move down in search results</dd>
+                    <dt>&#9166;</dt>
+                    <dd>Go to active search result</dd>
+                    <dt>+</dt>
+                    <dd>Collapse/expand all sections</dd>
+                </dl>
+            </div>
+
+            <div class="infos">
+                <h2>Search Tricks</h2>
+
+                <p>
+                    Prefix searches with a type followed by a colon (e.g.
+                    <code>fn:</code>) to restrict the search to a given type.
+                </p>
+
+                <p>
+                    Accepted types are: <code>fn</code>, <code>mod</code>,
+                    <code>struct</code>, <code>enum</code>,
+                    <code>trait</code>, <code>type</code>, <code>macro</code>,
+                    and <code>const</code>.
+                </p>
+
+                <p>
+                    Search functions by type signature (e.g.
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
+                </p>
+            </div>
+        </div>
+    </aside>
+
+    
+
+    <script>
+        window.rootPath = "../../";
+        window.currentCrate = "filters";
+        window.playgroundUrl = "";
+    </script>
+    <script src="../../jquery.js"></script>
+    <script src="../../main.js"></script>
+    
+    <script defer src="../../search-index.js"></script>
+</body>
+</html>

@@ -1,0 +1,1 @@
+initSidebarItems({"struct":[["OnErr","An iterator that maps `f` over the `Error` elements of `iter`, similar to `std::iter::Map`."],["UnwrapWith","An iterator that unwraps the `Ok` items of `iter`, while passing the `Err` items to its closure `f`."]],"trait":[["TraceIterator","This trait provides methods that make it easier to work with iterators that yield a `Result`."]]});

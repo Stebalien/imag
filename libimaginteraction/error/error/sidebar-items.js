@@ -1,0 +1,1 @@
+initSidebarItems({"enum":[["InteractionErrorKind",""]],"struct":[["InteractionError",""],["SomeNotExistingTypeWithATypeNameNoOneWillEverChoose",""]],"trait":[["MapErrInto","Trait to replace"],["OkOrErr","Trait to replace"]]});

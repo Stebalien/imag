@@ -1,0 +1,1 @@
+initSidebarItems({"mod":[["error",""],["external",""],["internal",""],["module_path","A helper module to create valid module entry paths"],["result",""]]});

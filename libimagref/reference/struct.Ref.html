@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `Ref` struct in crate `libimagref`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, Ref">
+
+    <title>libimagref::reference::Ref - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../../rustdoc.css">
+    <link rel="stylesheet" type="text/css" href="../../main.css">
+    
+
+    
+    
+</head>
+<body class="rustdoc">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <nav class="sidebar">
+        
+        <p class='location'><a href='../index.html'>libimagref</a>::<wbr><a href='index.html'>reference</a></p><script>window.sidebarCurrent = {name: 'Ref', ty: 'struct', relpath: ''};</script><script defer src="sidebar-items.js"></script>
+    </nav>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press ‘S’ to search, ‘?’ for more options…"
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content struct">
+<h1 class='fqn'><span class='in-band'>Struct <a href='../index.html'>libimagref</a>::<wbr><a href='index.html'>reference</a>::<wbr><a class='struct' href=''>Ref</a></span><span class='out-of-band'><span id='render-detail'>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a id='src-460' class='srclink' href='../../src/libimagref/reference.rs.html#48' title='goto source code'>[src]</a></span></h1>
+<pre class='rust struct'>pub struct Ref&lt;'a&gt;(_);</pre><h2 id='methods'>Methods</h2><h3 class='impl'><span class='in-band'><code>impl&lt;'a&gt; <a class='struct' href='../../libimagref/reference/struct.Ref.html' title='libimagref::reference::Ref'>Ref</a>&lt;'a&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a id='src-464' class='srclink' href='../../src/libimagref/reference.rs.html#50-536' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.from_filelockentry' class='method'><code>fn <a href='#method.from_filelockentry' class='fnname'>from_filelockentry</a>(fle: <a class='struct' href='../../libimagstore/store/struct.FileLockEntry.html' title='libimagstore::store::FileLockEntry'>FileLockEntry</a>&lt;'a&gt;) -&gt; <a class='type' href='../../libimagref/result/type.Result.html' title='libimagref::result::Result'>Result</a>&lt;<a class='struct' href='../../libimagref/reference/struct.Ref.html' title='libimagref::reference::Ref'>Ref</a>&lt;'a&gt;&gt;</code></h4>
+<div class='docblock'><p>Try to build a Ref object based on an existing FileLockEntry object</p>
+</div><h4 id='method.get' class='method'><code>fn <a href='#method.get' class='fnname'>get</a>(store: &amp;'a <a class='struct' href='../../libimagstore/store/struct.Store.html' title='libimagstore::store::Store'>Store</a>, si: <a class='struct' href='../../libimagstore/storeid/struct.StoreId.html' title='libimagstore::storeid::StoreId'>StoreId</a>) -&gt; <a class='type' href='../../libimagref/result/type.Result.html' title='libimagref::result::Result'>Result</a>&lt;<a class='struct' href='../../libimagref/reference/struct.Ref.html' title='libimagref::reference::Ref'>Ref</a>&lt;'a&gt;&gt;</code></h4>
+<div class='docblock'><p>Try to get <code>si</code> as Ref object from the store</p>
+</div><h4 id='method.get_by_hash' class='method'><code>fn <a href='#method.get_by_hash' class='fnname'>get_by_hash</a>(store: &amp;'a <a class='struct' href='../../libimagstore/store/struct.Store.html' title='libimagstore::store::Store'>Store</a>, hash: <a class='struct' href='https://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>) -&gt; <a class='type' href='../../libimagref/result/type.Result.html' title='libimagref::result::Result'>Result</a>&lt;<a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='struct' href='../../libimagref/reference/struct.Ref.html' title='libimagref::reference::Ref'>Ref</a>&lt;'a&gt;&gt;&gt;</code></h4>
+<div class='docblock'><p>Get a Ref object from the store by hash.</p>
+
+<p>Returns None if the hash cannot be found.</p>
+</div><h4 id='method.delete_by_hash' class='method'><code>fn <a href='#method.delete_by_hash' class='fnname'>delete_by_hash</a>(store: &amp;'a <a class='struct' href='../../libimagstore/store/struct.Store.html' title='libimagstore::store::Store'>Store</a>, hash: <a class='struct' href='https://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>) -&gt; <a class='type' href='../../libimagref/result/type.Result.html' title='libimagref::result::Result'>Result</a>&lt;<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.tuple.html'>()</a>&gt;</code></h4>
+<div class='docblock'><p>Delete a ref by hash</p>
+
+<p>If the returned Result contains an error, the ref might not be deleted.</p>
+</div><h4 id='method.create_with_hasher' class='method'><code>fn <a href='#method.create_with_hasher' class='fnname'>create_with_hasher</a>&lt;H:&nbsp;<a class='trait' href='../../libimagref/hasher/trait.Hasher.html' title='libimagref::hasher::Hasher'>Hasher</a>&gt;(store: &amp;'a <a class='struct' href='../../libimagstore/store/struct.Store.html' title='libimagstore::store::Store'>Store</a>, pb: <a class='struct' href='https://doc.rust-lang.org/nightly/std/path/struct.PathBuf.html' title='std::path::PathBuf'>PathBuf</a>, flags: <a class='struct' href='../../libimagref/flags/struct.RefFlags.html' title='libimagref::flags::RefFlags'>RefFlags</a>, h: H) -&gt; <a class='type' href='../../libimagref/result/type.Result.html' title='libimagref::result::Result'>Result</a>&lt;<a class='struct' href='../../libimagref/reference/struct.Ref.html' title='libimagref::reference::Ref'>Ref</a>&lt;'a&gt;&gt;</code></h4>
+<h4 id='method.create' class='method'><code>fn <a href='#method.create' class='fnname'>create</a>(store: &amp;'a <a class='struct' href='../../libimagstore/store/struct.Store.html' title='libimagstore::store::Store'>Store</a>, pb: <a class='struct' href='https://doc.rust-lang.org/nightly/std/path/struct.PathBuf.html' title='std::path::PathBuf'>PathBuf</a>, flags: <a class='struct' href='../../libimagref/flags/struct.RefFlags.html' title='libimagref::flags::RefFlags'>RefFlags</a>) -&gt; <a class='type' href='../../libimagref/result/type.Result.html' title='libimagref::result::Result'>Result</a>&lt;<a class='struct' href='../../libimagref/reference/struct.Ref.html' title='libimagref::reference::Ref'>Ref</a>&lt;'a&gt;&gt;</code></h4>
+<div class='docblock'><p>Create a Ref object which refers to <code>pb</code></p>
+</div><h4 id='method.get_path_hash' class='method'><code>fn <a href='#method.get_path_hash' class='fnname'>get_path_hash</a>(&amp;self) -&gt; <a class='type' href='../../libimagref/result/type.Result.html' title='libimagref::result::Result'>Result</a>&lt;<a class='struct' href='https://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>&gt;</code></h4>
+<div class='docblock'><p>Get the hash from the path of the ref</p>
+</div><h4 id='method.get_stored_hash' class='method'><code>fn <a href='#method.get_stored_hash' class='fnname'>get_stored_hash</a>(&amp;self) -&gt; <a class='type' href='../../libimagref/result/type.Result.html' title='libimagref::result::Result'>Result</a>&lt;<a class='struct' href='https://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>&gt;</code></h4>
+<div class='docblock'><p>Get the hash of the link target which is stored in the ref object</p>
+</div><h4 id='method.get_stored_hash_with_hasher' class='method'><code>fn <a href='#method.get_stored_hash_with_hasher' class='fnname'>get_stored_hash_with_hasher</a>&lt;H:&nbsp;<a class='trait' href='../../libimagref/hasher/trait.Hasher.html' title='libimagref::hasher::Hasher'>Hasher</a>&gt;(&amp;self, h: &amp;H) -&gt; <a class='type' href='../../libimagref/result/type.Result.html' title='libimagref::result::Result'>Result</a>&lt;<a class='struct' href='https://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>&gt;</code></h4>
+<div class='docblock'><p>Get the hahs of the link target which is stored in the ref object, which is hashed with a
+custom Hasher instance.</p>
+</div><h4 id='method.get_current_hash' class='method'><code>fn <a href='#method.get_current_hash' class='fnname'>get_current_hash</a>(&amp;self) -&gt; <a class='type' href='../../libimagref/result/type.Result.html' title='libimagref::result::Result'>Result</a>&lt;<a class='struct' href='https://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>&gt;</code></h4>
+<div class='docblock'><p>Get the hash of the link target by reading the link target and hashing the contents</p>
+</div><h4 id='method.get_current_hash_with_hasher' class='method'><code>fn <a href='#method.get_current_hash_with_hasher' class='fnname'>get_current_hash_with_hasher</a>&lt;H:&nbsp;<a class='trait' href='../../libimagref/hasher/trait.Hasher.html' title='libimagref::hasher::Hasher'>Hasher</a>&gt;(&amp;self, h: H) -&gt; <a class='type' href='../../libimagref/result/type.Result.html' title='libimagref::result::Result'>Result</a>&lt;<a class='struct' href='https://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>&gt;</code></h4>
+<div class='docblock'><p>Get the hash of the link target by reading the link target and hashing the contents with the
+custom hasher</p>
+</div><h4 id='method.fs_link_exists' class='method'><code>fn <a href='#method.fs_link_exists' class='fnname'>fs_link_exists</a>(&amp;self) -&gt; <a class='type' href='../../libimagref/result/type.Result.html' title='libimagref::result::Result'>Result</a>&lt;<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a>&gt;</code></h4>
+<div class='docblock'><p>check whether the pointer the Ref represents still points to a file which exists</p>
+</div><h4 id='method.is_ref_to_file' class='method'><code>fn <a href='#method.is_ref_to_file' class='fnname'>is_ref_to_file</a>(&amp;self) -&gt; <a class='type' href='../../libimagref/result/type.Result.html' title='libimagref::result::Result'>Result</a>&lt;<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a>&gt;</code></h4>
+<div class='docblock'><p>Alias for <code>r.fs_link_exists() &amp;&amp; r.deref().is_file()</code></p>
+</div><h4 id='method.is_ref_to_dir' class='method'><code>fn <a href='#method.is_ref_to_dir' class='fnname'>is_ref_to_dir</a>(&amp;self) -&gt; <a class='type' href='../../libimagref/result/type.Result.html' title='libimagref::result::Result'>Result</a>&lt;<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a>&gt;</code></h4>
+<div class='docblock'><p>Alias for <code>r.fs_link_exists() &amp;&amp; r.deref().is_dir()</code></p>
+</div><h4 id='method.is_dangling' class='method'><code>fn <a href='#method.is_dangling' class='fnname'>is_dangling</a>(&amp;self) -&gt; <a class='type' href='../../libimagref/result/type.Result.html' title='libimagref::result::Result'>Result</a>&lt;<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a>&gt;</code></h4>
+<div class='docblock'><p>Alias for <code>!Ref::fs_link_exists()</code></p>
+</div><h4 id='method.fs_link_valid' class='method'><code>fn <a href='#method.fs_link_valid' class='fnname'>fs_link_valid</a>(&amp;self) -&gt; <a class='type' href='../../libimagref/result/type.Result.html' title='libimagref::result::Result'>Result</a>&lt;<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a>&gt;</code></h4>
+<div class='docblock'><p>check whether the pointer the Ref represents is valid
+This includes:
+    - Hashsum of the file is still the same as stored in the Ref
+    - file permissions are still valid</p>
+</div><h4 id='method.fs_link_valid_permissions' class='method'><code>fn <a href='#method.fs_link_valid_permissions' class='fnname'>fs_link_valid_permissions</a>(&amp;self) -&gt; <a class='type' href='../../libimagref/result/type.Result.html' title='libimagref::result::Result'>Result</a>&lt;<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a>&gt;</code></h4>
+<div class='docblock'><p>Check whether the file permissions of the referenced file are equal to the stored
+permissions</p>
+</div><h4 id='method.fs_link_valid_hash' class='method'><code>fn <a href='#method.fs_link_valid_hash' class='fnname'>fs_link_valid_hash</a>(&amp;self) -&gt; <a class='type' href='../../libimagref/result/type.Result.html' title='libimagref::result::Result'>Result</a>&lt;<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a>&gt;</code></h4>
+<div class='docblock'><p>Check whether the Hashsum of the referenced file is equal to the stored hashsum</p>
+</div><h4 id='method.update_ref' class='method'><code>fn <a href='#method.update_ref' class='fnname'>update_ref</a>(&amp;mut self) -&gt; <a class='type' href='../../libimagref/result/type.Result.html' title='libimagref::result::Result'>Result</a>&lt;<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.tuple.html'>()</a>&gt;</code></h4>
+<div class='docblock'><p>Update the Ref by re-checking the file from FS
+This errors if the file is not present or cannot be read()</p>
+</div><h4 id='method.update_ref_with_hasher' class='method'><code>fn <a href='#method.update_ref_with_hasher' class='fnname'>update_ref_with_hasher</a>&lt;H:&nbsp;<a class='trait' href='../../libimagref/hasher/trait.Hasher.html' title='libimagref::hasher::Hasher'>Hasher</a>&gt;(&amp;mut self, h: &amp;H) -&gt; <a class='type' href='../../libimagref/result/type.Result.html' title='libimagref::result::Result'>Result</a>&lt;<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.tuple.html'>()</a>&gt;</code></h4>
+<div class='docblock'><p>Update the Ref by re-checking the file from FS using the passed Hasher instance
+This errors if the file is not present or cannot be read()</p>
+</div><h4 id='method.fs_file' class='method'><code>fn <a href='#method.fs_file' class='fnname'>fs_file</a>(&amp;self) -&gt; <a class='type' href='../../libimagref/result/type.Result.html' title='libimagref::result::Result'>Result</a>&lt;<a class='struct' href='https://doc.rust-lang.org/nightly/std/path/struct.PathBuf.html' title='std::path::PathBuf'>PathBuf</a>&gt;</code></h4>
+<div class='docblock'><p>Get the path of the file which is reffered to by this Ref</p>
+</div><h4 id='method.exists' class='method'><code>fn <a href='#method.exists' class='fnname'>exists</a>(store: &amp;<a class='struct' href='../../libimagstore/store/struct.Store.html' title='libimagstore::store::Store'>Store</a>, pb: <a class='struct' href='https://doc.rust-lang.org/nightly/std/path/struct.PathBuf.html' title='std::path::PathBuf'>PathBuf</a>) -&gt; <a class='type' href='../../libimagref/result/type.Result.html' title='libimagref::result::Result'>Result</a>&lt;<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a>&gt;</code></h4>
+<div class='docblock'><p>Check whether there is a reference to the file at <code>pb</code></p>
+</div><h4 id='method.refind' class='method'><code>fn <a href='#method.refind' class='fnname'>refind</a>(&amp;self, search_roots: <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='struct' href='https://doc.rust-lang.org/nightly/collections/vec/struct.Vec.html' title='collections::vec::Vec'>Vec</a>&lt;<a class='struct' href='https://doc.rust-lang.org/nightly/std/path/struct.PathBuf.html' title='std::path::PathBuf'>PathBuf</a>&gt;&gt;) -&gt; <a class='type' href='../../libimagref/result/type.Result.html' title='libimagref::result::Result'>Result</a>&lt;<a class='struct' href='https://doc.rust-lang.org/nightly/std/path/struct.PathBuf.html' title='std::path::PathBuf'>PathBuf</a>&gt;</code></h4>
+<div class='docblock'><p>Re-find a referenced file</p>
+
+<p>This function tries to re-find a ref by searching all directories in <code>search_roots</code> recursively
+for a file which matches the hash of the Ref.</p>
+
+<p>If <code>search_roots</code> is <code>None</code>, it starts at the filesystem root <code>/</code>.</p>
+
+<p>If the target cannot be found, this yields a RefTargetDoesNotExist error kind.</p>
+
+<h1 id='warning' class='section-header'><a href='#warning'>Warning</a></h1>
+<p>This option causes heavy I/O as it recursively searches the Filesystem.</p>
+</div><h4 id='method.refind_with_hasher' class='method'><code>fn <a href='#method.refind_with_hasher' class='fnname'>refind_with_hasher</a>&lt;H:&nbsp;<a class='trait' href='../../libimagref/hasher/trait.Hasher.html' title='libimagref::hasher::Hasher'>Hasher</a>&gt;(&amp;self, search_roots: <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='struct' href='https://doc.rust-lang.org/nightly/collections/vec/struct.Vec.html' title='collections::vec::Vec'>Vec</a>&lt;<a class='struct' href='https://doc.rust-lang.org/nightly/std/path/struct.PathBuf.html' title='std::path::PathBuf'>PathBuf</a>&gt;&gt;, h: H) -&gt; <a class='type' href='../../libimagref/result/type.Result.html' title='libimagref::result::Result'>Result</a>&lt;<a class='struct' href='https://doc.rust-lang.org/nightly/std/path/struct.PathBuf.html' title='std::path::PathBuf'>PathBuf</a>&gt;</code></h4>
+</div><h2 id='implementations'>Trait Implementations</h2><h3 class='impl'><span class='in-band'><code>impl&lt;'a&gt; <a class='trait' href='https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html' title='core::fmt::Debug'>Debug</a> for <a class='struct' href='../../libimagref/reference/struct.Ref.html' title='libimagref::reference::Ref'>Ref</a>&lt;'a&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a id='src-453' class='srclink' href='../../src/libimagref/reference.rs.html#47' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.fmt' class='method'><code>fn <a href='https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html#tymethod.fmt' class='fnname'>fmt</a>(&amp;self, __arg_0: &amp;mut <a class='struct' href='https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html' title='core::fmt::Formatter'>Formatter</a>) -&gt; <a class='type' href='https://doc.rust-lang.org/nightly/core/fmt/type.Result.html' title='core::fmt::Result'>Result</a></code></h4>
+<div class='docblock'><p>Formats the value using the given formatter.</p>
+</div></div><h3 class='impl'><span class='in-band'><code>impl&lt;'a&gt; <a class='trait' href='https://doc.rust-lang.org/nightly/core/ops/trait.Deref.html' title='core::ops::Deref'>Deref</a> for <a class='struct' href='../../libimagref/reference/struct.Ref.html' title='libimagref::reference::Ref'>Ref</a>&lt;'a&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a id='src-775' class='srclink' href='../../src/libimagref/reference.rs.html#538-545' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='associatedtype.Target' class='type'><code>type <a href='https://doc.rust-lang.org/nightly/core/ops/trait.Deref.html#associatedtype.Target' class='type'>Target</a> = <a class='struct' href='../../libimagstore/store/struct.FileLockEntry.html' title='libimagstore::store::FileLockEntry'>FileLockEntry</a>&lt;'a&gt;</code></h4>
+<div class='docblock'><p>The resulting type after dereferencing</p>
+</div><h4 id='method.deref' class='method'><code>fn <a href='https://doc.rust-lang.org/nightly/core/ops/trait.Deref.html#tymethod.deref' class='fnname'>deref</a>(&amp;self) -&gt; &amp;<a class='struct' href='../../libimagstore/store/struct.FileLockEntry.html' title='libimagstore::store::FileLockEntry'>FileLockEntry</a>&lt;'a&gt;</code></h4>
+<div class='docblock'><p>The method called to dereference a value</p>
+</div></div><h3 class='impl'><span class='in-band'><code>impl&lt;'a&gt; <a class='trait' href='https://doc.rust-lang.org/nightly/core/ops/trait.DerefMut.html' title='core::ops::DerefMut'>DerefMut</a> for <a class='struct' href='../../libimagref/reference/struct.Ref.html' title='libimagref::reference::Ref'>Ref</a>&lt;'a&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a id='src-780' class='srclink' href='../../src/libimagref/reference.rs.html#547-553' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.deref_mut' class='method'><code>fn <a href='https://doc.rust-lang.org/nightly/core/ops/trait.DerefMut.html#tymethod.deref_mut' class='fnname'>deref_mut</a>(&amp;mut self) -&gt; &amp;mut <a class='struct' href='../../libimagstore/store/struct.FileLockEntry.html' title='libimagstore::store::FileLockEntry'>FileLockEntry</a>&lt;'a&gt;</code></h4>
+<div class='docblock'><p>The method called to mutably dereference a value</p>
+</div></div><h3 class='impl'><span class='in-band'><code>impl&lt;'a&gt; <a class='trait' href='https://doc.rust-lang.org/nightly/core/fmt/trait.Display.html' title='core::fmt::Display'>Display</a> for <a class='struct' href='../../libimagref/reference/struct.Ref.html' title='libimagref::reference::Ref'>Ref</a>&lt;'a&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a id='src-784' class='srclink' href='../../src/libimagref/reference.rs.html#555-567' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.fmt-1' class='method'><code>fn <a href='https://doc.rust-lang.org/nightly/core/fmt/trait.Display.html#tymethod.fmt' class='fnname'>fmt</a>(&amp;self, fmt: &amp;mut <a class='struct' href='https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html' title='core::fmt::Formatter'>Formatter</a>) -&gt; <a class='enum' href='https://doc.rust-lang.org/nightly/core/result/enum.Result.html' title='core::result::Result'>RResult</a>&lt;<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.tuple.html'>()</a>,&nbsp;<a class='struct' href='https://doc.rust-lang.org/nightly/core/fmt/struct.Error.html' title='core::fmt::Error'>FmtError</a>&gt;</code></h4>
+<div class='docblock'><p>Formats the value using the given formatter.</p>
+</div></div><h3 class='impl'><span class='in-band'><code>impl&lt;'a&gt; <a class='trait' href='https://doc.rust-lang.org/nightly/core/convert/trait.Into.html' title='core::convert::Into'>Into</a>&lt;<a class='struct' href='../../libimagstore/store/struct.FileLockEntry.html' title='libimagstore::store::FileLockEntry'>FileLockEntry</a>&lt;'a&gt;&gt; for <a class='struct' href='../../libimagref/reference/struct.Ref.html' title='libimagref::reference::Ref'>Ref</a>&lt;'a&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a id='src-796' class='srclink' href='../../src/libimagref/reference.rs.html#569-575' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.into' class='method'><code>fn <a href='https://doc.rust-lang.org/nightly/core/convert/trait.Into.html#tymethod.into' class='fnname'>into</a>(self) -&gt; <a class='struct' href='../../libimagstore/store/struct.FileLockEntry.html' title='libimagstore::store::FileLockEntry'>FileLockEntry</a>&lt;'a&gt;</code></h4>
+<div class='docblock'><p>Performs the conversion.</p>
+</div></div></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <aside id="help" class="hidden">
+        <div>
+            <h1 class="hidden">Help</h1>
+
+            <div class="shortcuts">
+                <h2>Keyboard Shortcuts</h2>
+
+                <dl>
+                    <dt>?</dt>
+                    <dd>Show this help dialog</dd>
+                    <dt>S</dt>
+                    <dd>Focus the search field</dd>
+                    <dt>&larrb;</dt>
+                    <dd>Move up in search results</dd>
+                    <dt>&rarrb;</dt>
+                    <dd>Move down in search results</dd>
+                    <dt>&#9166;</dt>
+                    <dd>Go to active search result</dd>
+                    <dt>+</dt>
+                    <dd>Collapse/expand all sections</dd>
+                </dl>
+            </div>
+
+            <div class="infos">
+                <h2>Search Tricks</h2>
+
+                <p>
+                    Prefix searches with a type followed by a colon (e.g.
+                    <code>fn:</code>) to restrict the search to a given type.
+                </p>
+
+                <p>
+                    Accepted types are: <code>fn</code>, <code>mod</code>,
+                    <code>struct</code>, <code>enum</code>,
+                    <code>trait</code>, <code>type</code>, <code>macro</code>,
+                    and <code>const</code>.
+                </p>
+
+                <p>
+                    Search functions by type signature (e.g.
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
+                </p>
+            </div>
+        </div>
+    </aside>
+
+    
+
+    <script>
+        window.rootPath = "../../";
+        window.currentCrate = "libimagref";
+        window.playgroundUrl = "";
+    </script>
+    <script src="../../jquery.js"></script>
+    <script src="../../main.js"></script>
+    
+    <script defer src="../../search-index.js"></script>
+</body>
+</html>

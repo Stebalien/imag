@@ -1,0 +1,1 @@
+initSidebarItems({"fn":[["fetch_index",""]]});

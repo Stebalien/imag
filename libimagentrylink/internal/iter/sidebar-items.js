@@ -1,0 +1,1 @@
+initSidebarItems({"struct":[["DeleteUnlinkedIter","An iterator that removes all Items from the iterator that are not linked anymore by calling `Store::delete()` on them."],["FilterLinksIter","An iterator helper that has a function F."],["GetIter","An Iterator that `Store::get()`s the Entries from the store while consumed"],["LinkIter",""]],"trait":[["IntoValues",""]]});

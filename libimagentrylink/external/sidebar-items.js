@@ -1,0 +1,1 @@
+initSidebarItems({"fn":[["is_external_link_storeid","Check whether the StoreId starts with `/link/external/`"]],"mod":[["iter","Iterator helpers for external linking stuff"]],"struct":[["Link","\"Link\" Type, just an abstraction over `FileLockEntry` to have some convenience internally."]],"trait":[["ExternalLinker",""]]});

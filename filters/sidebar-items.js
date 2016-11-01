@@ -1,0 +1,1 @@
+initSidebarItems({"macro":[["impl_operators!","Creates operator implementations for a Filter struct Currently only Fn and Filter implementations are handled"]],"mod":[["filter","The filter implementation"],["ops",""]]});
