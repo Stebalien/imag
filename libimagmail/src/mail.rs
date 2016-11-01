@@ -3,6 +3,7 @@ use std::path::Path;
 use std::path::PathBuf;
 use std::fs::File;
 use std::io::Read;
+use std::ops::{Deref, DerefMut};
 
 use libimagstore::store::{FileLockEntry, Store};
 use libimagref::reference::Ref;
@@ -120,3 +121,18 @@ impl<'a> Mail<'a> {
     }
 
 }
+
+impl<'a> Deref for Mail<'a> {
+    type Target = Ref<'a>;
+
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+
+impl<'a> DerefMut for Mail<'a> {
+    fn deref_mut(&mut self) -> &mut Self::Target {
+        &mut self.0
+    }
+}
+
