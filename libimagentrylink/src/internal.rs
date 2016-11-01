@@ -53,6 +53,7 @@ pub trait InternalLinker {
 
 pub mod iter {
     use std::vec::IntoIter;
+    use std::cmp::Ordering;
     use super::Link;
 
     use error::LinkErrorKind as LEK;
