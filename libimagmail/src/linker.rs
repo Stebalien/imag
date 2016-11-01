@@ -121,7 +121,7 @@ impl<'a> Linker<'a> {
             }
             let o_replyto = o_replyto.as_ref().unwrap();
 
-            let mut other_mail = match self.h.get_mut(&o_replyto) {
+            let mut other_mail = match self.h.get_mut(o_replyto) {
                 None    => continue,
                 Some(o) => o,
             };
