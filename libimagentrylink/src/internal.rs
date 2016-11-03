@@ -308,7 +308,7 @@ pub mod pred {
             fn filter(&self, entry: &Entry) -> bool {
                 match entry.get_internal_links() {
                     Err(e)    => (self.errfn)(&e),
-                    Ok(links) => links.count().cmp(self.n) == self.op,
+                    Ok(links) => links.count().cmp(*self.n) == self.op,
                 }
             }
         }
